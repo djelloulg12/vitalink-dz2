@@ -1,0 +1,2022 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VITALINK DZ — نبض الرعاية المتصل</title>
+<meta name="description" content="VITALINK DZ — نبض الرعاية المتصل. منظومة وطنية موحدة للرعاية الصحية والاجتماعية والسياحة العلاجية.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   VITALINK DZ — نظام التصميم
+   الأبيض + البنفسجي | Modern Minimal Premium
+   ============================================================ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --white: #FFFFFF;
+  --purple: #6C4EFF;
+  --purple-600: #5A3FE8;
+  --purple-100: #F0EDFF;
+  --purple-050: #F7F5FF;
+  --ink: #171726;
+  --ink-2: #3B3B54;
+  --muted: #8A8AA3;
+  --line: #ECEAF4;
+  --green: #22C55E;
+  --green-100: #E7F9EF;
+  --orange: #F59E0B;
+  --orange-100: #FEF3E2;
+  --red: #EF4444;
+  --red-100: #FDE8E8;
+  --blue: #3B82F6;
+  --blue-100: #E8F1FE;
+  --radius-lg: 28px;
+  --radius: 20px;
+  --radius-sm: 14px;
+  --shadow: 0 20px 50px rgba(23, 23, 38, .08);
+  --shadow-sm: 0 6px 20px rgba(23, 23, 38, .06);
+  --font: 'Readex Pro', 'Segoe UI', Tahoma, sans-serif;
+  --topbar-h: 70px;
+}
+html, body { height: 100%; }
+body {
+  font-family: var(--font);
+  background: #F8F7FC;
+  color: var(--ink);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+h1,h2,h3,h4,h5 { font-weight: 700; line-height: 1.35; }
+button { font-family: var(--font); cursor: pointer; border: none; background: none; }
+input, select, textarea { font-family: var(--font); }
+a { color: var(--purple); text-decoration: none; }
+img { max-width: 100%; }
+
+/* ===== أزرار ===== */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 13px 22px; border-radius: var(--radius-sm); font-weight: 600; font-size: 15px;
+  transition: .22s ease; white-space: nowrap; user-select: none;
+}
+.btn:active { transform: scale(.97); }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn-primary { background: var(--purple); color: #fff; box-shadow: 0 10px 24px rgba(108,78,255,.32); }
+.btn-primary:hover { background: var(--purple-600); transform: translateY(-1px); }
+.btn-soft { background: var(--purple-100); color: var(--purple-600); }
+.btn-soft:hover { background: #E3DEFF; }
+.btn-white { background: #fff; color: var(--purple-600); }
+.btn-line { border: 1.6px solid var(--line); color: var(--ink-2); background: #fff; }
+.btn-line:hover { border-color: var(--purple); color: var(--purple); }
+.btn-ghost { color: var(--muted); }
+.btn-ghost:hover { color: var(--purple); background: var(--purple-050); }
+.btn-danger { background: var(--red); color: #fff; box-shadow: 0 10px 22px rgba(239,68,68,.28); }
+.btn-success { background: var(--green); color: #fff; }
+.btn-sm { padding: 9px 15px; font-size: 13px; border-radius: 12px; }
+.btn-lg { padding: 16px 30px; font-size: 17px; border-radius: 18px; }
+.btn-block { width: 100%; }
+.icon-btn {
+  width: 44px; height: 44px; border-radius: 14px; display: inline-grid; place-items: center;
+  font-size: 18px; color: var(--ink-2); position: relative; transition: .2s ease;
+}
+.icon-btn:hover { background: var(--purple-050); }
+
+/* ===== نماذج ===== */
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--ink-2); margin-bottom: 6px; }
+.form-control {
+  width: 100%; padding: 12px 14px; border: 1.6px solid var(--line); border-radius: 13px;
+  font-size: 15px; color: var(--ink); background: #fff; transition: .2s ease; outline: none;
+}
+.form-control:focus { border-color: var(--purple); box-shadow: 0 0 0 4px rgba(108,78,255,.12); }
+textarea.form-control { resize: vertical; min-height: 84px; }
+select.form-control { appearance: auto; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+.field-error { font-size: 12px; color: var(--red); margin-top: 5px; }
+.field-ok { font-size: 12px; color: var(--green); margin-top: 5px; }
+
+/* ===== حاويات ===== */
+.container { width: min(1360px, 96vw); margin: 0 auto; }
+.page { padding: 24px 0 90px; }
+.grid { display: grid; gap: 18px; }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1100px) { .grid-4 { grid-template-columns: repeat(2,1fr); } .grid-3 { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 640px) { .grid-4,.grid-3,.grid-2 { grid-template-columns: 1fr; } }
+
+/* ===== بطاقات ===== */
+.card {
+  background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 22px; box-shadow: var(--shadow-sm);
+}
+.card-title { font-size: 16px; font-weight: 700; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+.card-title .ico { width: 34px; height: 34px; border-radius: 11px; background: var(--purple-100); display: grid; place-items: center; font-size: 16px; }
+.section-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 6px 0 16px; flex-wrap: wrap; }
+.section-head h2 { font-size: 22px; }
+.muted { color: var(--muted); }
+.small { font-size: 13px; }
+.mt-8 { margin-top: 8px; } .mt-12 { margin-top: 12px; } .mt-16 { margin-top: 16px; } .mt-24 { margin-top: 24px; }
+.mb-16 { margin-bottom: 16px; } .mb-24 { margin-bottom: 24px; }
+.flex { display: flex; } .items-center { align-items: center; } .justify-between { justify-content: space-between; }
+.flex-wrap { flex-wrap: wrap; } .gap-8 { gap: 8px; } .gap-12 { gap: 12px; } .gap-16 { gap: 16px; }
+
+/* ===== شارات ===== */
+.badge { display: inline-flex; align-items: center; gap: 5px; padding: 4px 12px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+.badge-green { background: var(--green-100); color: #15803D; }
+.badge-orange { background: var(--orange-100); color: #B45309; }
+.badge-red { background: var(--red-100); color: #B91C1C; }
+.badge-blue { background: var(--blue-100); color: #1D4ED8; }
+.badge-purple { background: var(--purple-100); color: var(--purple-600); }
+.badge-gray { background: #F0F0F6; color: var(--muted); }
+.dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+.dot-green { background: var(--green); } .dot-orange { background: var(--orange); } .dot-red { background: var(--red); } .dot-purple { background: var(--purple); }
+
+/* ===== رأس الصفحة ===== */
+.topbar {
+  position: sticky; top: 0; z-index: 90; height: var(--topbar-h);
+  background: rgba(255,255,255,.85); backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line);
+}
+.topbar-inner { height: var(--topbar-h); display: flex; align-items: center; gap: 14px; }
+.brand { display: flex; align-items: center; gap: 11px; cursor: pointer; }
+.brand-logo {
+  width: 46px; height: 46px; border-radius: 15px; display: grid; place-items: center;
+  background: linear-gradient(135deg, var(--purple), #9A7BFF); color: #fff; font-size: 22px;
+  box-shadow: 0 8px 20px rgba(108,78,255,.35);
+}
+.brand-text b { font-size: 18px; color: var(--ink); letter-spacing: -.2px; }
+.brand-text b span { color: var(--purple); }
+.brand-text small { display: block; font-size: 11px; color: var(--muted); font-weight: 600; }
+.search-box { flex: 1; max-width: 460px; position: relative; }
+.search-box input {
+  width: 100%; padding: 12px 44px 12px 16px; border: 1.6px solid var(--line); border-radius: 999px;
+  font-size: 14px; background: var(--purple-050); outline: none; transition: .2s ease;
+}
+.search-box input:focus { border-color: var(--purple); background: #fff; box-shadow: 0 0 0 4px rgba(108,78,255,.1); }
+.search-box .s-ico { position: absolute; inset-inline-start: 16px; top: 50%; transform: translateY(-50%); color: var(--muted); }
+.search-results {
+  position: absolute; top: calc(100% + 8px); inset-inline: 0; background: #fff; border-radius: 16px;
+  box-shadow: var(--shadow); border: 1px solid var(--line); overflow: hidden; z-index: 60; display: none;
+}
+.search-results.open { display: block; }
+.sr-item { display: flex; align-items: center; gap: 12px; padding: 12px 16px; cursor: pointer; transition: .15s ease; }
+.sr-item:hover { background: var(--purple-050); }
+.sr-item b { font-size: 14px; }
+.sr-item .small { font-size: 12px; }
+.conn-pill {
+  display: inline-flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 600;
+  padding: 7px 14px; border-radius: 999px;
+}
+.conn-on { background: var(--green-100); color: #15803D; }
+.conn-off { background: var(--orange-100); color: #B45309; }
+.user-chip { display: flex; align-items: center; gap: 10px; padding: 6px 12px 6px 6px; border-radius: 999px; border: 1px solid var(--line); cursor: pointer; transition: .2s; }
+.user-chip:hover { border-color: var(--purple); }
+.avatar {
+  width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center;
+  color: #fff; font-weight: 700; font-size: 16px; flex-shrink: 0;
+}
+.user-chip .meta { line-height: 1.2; }
+.user-chip .meta b { font-size: 13px; display: block; }
+.user-chip .meta small { font-size: 11px; color: var(--muted); }
+.badge-count {
+  position: absolute; top: -3px; inset-inline-end: -3px; min-width: 18px; height: 18px; border-radius: 9px;
+  background: var(--red); color: #fff; font-size: 11px; display: grid; place-items: center; padding: 0 5px;
+}
+
+/* ===== القائمة الجانبية ===== */
+.shell { display: grid; grid-template-columns: 250px 1fr; min-height: 100vh; }
+.sidebar {
+  border-inline-end: 1px solid var(--line); background: var(--white);
+  padding: 18px 14px; position: sticky; top: var(--topbar-h); height: calc(100vh - var(--topbar-h)); overflow-y: auto;
+}
+.side-label { font-size: 11px; font-weight: 700; color: var(--muted); padding: 14px 12px 8px; letter-spacing: .4px; }
+.nav-item {
+  display: flex; align-items: center; gap: 12px; width: 100%; text-align: start;
+  padding: 13px 14px; border-radius: 14px; font-size: 14px; font-weight: 600;
+  color: var(--ink-2); transition: .2s ease; margin-bottom: 3px;
+}
+.nav-item .n-ico { width: 34px; height: 34px; border-radius: 11px; display: grid; place-items: center; background: var(--purple-050); font-size: 16px; transition: .2s; }
+.nav-item:hover { background: var(--purple-050); color: var(--purple-600); }
+.nav-item.active { background: var(--purple); color: #fff; box-shadow: 0 10px 22px rgba(108,78,255,.3); }
+.nav-item.active .n-ico { background: rgba(255,255,255,.18); }
+.side-card-promo {
+  margin-top: 18px; border-radius: 18px; padding: 18px; color: #fff;
+  background: linear-gradient(150deg, var(--purple), #8B5CF6);
+}
+.side-card-promo b { font-size: 14px; }
+.side-card-promo p { font-size: 12px; opacity: .85; margin: 6px 0 12px; }
+
+/* ===== المحتوى ===== */
+.main { min-width: 0; padding: 24px 26px 60px; }
+.view-wrap { animation: viewIn .3s ease; }
+@keyframes viewIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+/* ===== لوحة الهبوط ===== */
+.landing { min-height: 100vh; }
+.land-nav { height: var(--topbar-h); display: flex; align-items: center; gap: 14px; }
+.land-hero {
+  background: linear-gradient(150deg, #1A1A3A 0%, #2A1E5E 45%, var(--purple) 130%);
+  color: #fff; border-radius: 34px; padding: 64px 56px; position: relative; overflow: hidden; margin: 16px 0 26px;
+}
+.land-hero::before { content:''; position:absolute; inset:0; background: radial-gradient(circle at 85% 10%, rgba(255,255,255,.14), transparent 45%); }
+.land-hero::after { content:'⚕️'; position:absolute; inset-inline-start:-40px; bottom:-50px; font-size: 260px; opacity:.06; }
+.land-hero .pill-tag { display:inline-flex; align-items:center; gap:8px; background: rgba(255,255,255,.14); border-radius:999px; padding:8px 16px; font-size:13px; font-weight:600; position:relative; z-index:1; }
+.land-hero h1 { font-size: 54px; letter-spacing:-1.5px; margin: 22px 0 6px; position:relative; z-index:1; }
+.land-hero h1 span { color: #C9BDFF; }
+.land-hero .tagline { font-size: 22px; opacity:.92; position:relative; z-index:1; }
+.land-hero p { max-width: 60ch; opacity:.8; margin-top: 14px; font-size: 16px; position:relative; z-index:1; }
+.land-hero .cta { margin-top: 30px; display:flex; gap:12px; flex-wrap:wrap; position:relative; z-index:1; }
+.land-features { display:grid; grid-template-columns: repeat(4,1fr); gap:18px; margin-bottom: 26px; }
+@media (max-width:900px){ .land-features{ grid-template-columns:repeat(2,1fr);} .land-hero h1{font-size:38px;} .land-hero{ padding:44px 28px;} }
+@media (max-width:520px){ .land-features{ grid-template-columns:1fr;} }
+.lf-card { background:#fff; border:1px solid var(--line); border-radius: var(--radius); padding:22px; transition:.25s ease; }
+.lf-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.lf-card .lf-ico { width:54px; height:54px; border-radius:17px; display:grid; place-items:center; font-size:26px; margin-bottom:14px; }
+.lf-card b { font-size:16px; display:block; margin-bottom:6px; }
+.lf-card p { font-size:13px; color: var(--muted); }
+
+/* ===== شاشة الدخول ===== */
+.login-screen { min-height:100vh; display:grid; place-items:center; padding:30px 16px; }
+.login-box { width:min(760px, 100%); }
+.login-head { text-align:center; margin-bottom:26px; }
+.login-head .brand-logo { margin:0 auto 14px; width:64px; height:64px; font-size:30px; border-radius:20px; }
+.login-head h1 { font-size:30px; }
+.login-head p { color: var(--muted); margin-top:6px; }
+.role-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+@media (max-width:700px){ .role-cards{ grid-template-columns:repeat(2,1fr);} }
+@media (max-width:460px){ .role-cards{ grid-template-columns:1fr;} }
+.role-card {
+  background:#fff; border:1.6px solid var(--line); border-radius:20px; padding:20px; text-align:center; cursor:pointer; transition:.22s ease;
+}
+.role-card:hover { border-color: var(--purple); transform: translateY(-3px); box-shadow: var(--shadow-sm); }
+.role-card .r-ico { width:60px; height:60px; margin:0 auto 12px; border-radius:20px; display:grid; place-items:center; font-size:28px; background: var(--purple-100); }
+.role-card b { font-size:15px; display:block; }
+.role-card small { color: var(--muted); font-size:12px; }
+.role-card .go { margin-top:12px; display:inline-flex; align-items:center; gap:6px; font-size:13px; font-weight:600; color: var(--purple-600); opacity:0; transition:.2s; }
+.role-card:hover .go { opacity:1; }
+
+/* ===== الإحصائيات ===== */
+.stat-card { display:flex; align-items:center; gap:16px; }
+.stat-card .s-ico { width:58px; height:58px; border-radius:18px; display:grid; place-items:center; font-size:26px; flex-shrink:0; }
+.stat-card .s-num { font-size:30px; font-weight:700; letter-spacing:-.5px; line-height:1.1; }
+.stat-card .s-lab { font-size:13px; color:var(--muted); font-weight:600; }
+.bg-purple-soft { background: var(--purple-100); } .bg-green-soft { background: var(--green-100); }
+.bg-orange-soft { background: var(--orange-100); } .bg-red-soft { background: var(--red-100); } .bg-blue-soft { background: var(--blue-100); }
+
+/* ===== جدول المرضى ===== */
+.table-wrap { overflow-x:auto; }
+table.tbl { width:100%; border-collapse:collapse; font-size:14px; }
+.tbl th { text-align:start; padding:12px 14px; color:var(--muted); font-weight:600; font-size:12px; border-bottom:2px solid var(--line); white-space:nowrap; }
+.tbl td { padding:13px 14px; border-bottom:1px solid var(--line); vertical-align:middle; white-space:nowrap; }
+.tbl tbody tr { transition:.15s ease; cursor:pointer; }
+.tbl tbody tr:hover { background: var(--purple-050); }
+.tbl tbody tr.sel { background: var(--purple-100); }
+.pat-cell { display:flex; align-items:center; gap:11px; }
+.pat-cell b { font-size:14px; display:block; line-height:1.3; }
+.pat-cell small { font-size:11px; color:var(--muted); }
+
+/* ===== البطاقة الجانبية الذكية ===== */
+.side-panel { position: sticky; top: calc(var(--topbar-h) + 20px); }
+.smart-card { background:#fff; border-radius:26px; border:1px solid var(--line); box-shadow: var(--shadow-sm); overflow:hidden; }
+.smart-card .sc-head { padding:26px 24px 20px; text-align:center; position:relative; }
+.sc-head .avatar { width:86px; height:86px; font-size:34px; margin:0 auto 12px; box-shadow:0 10px 24px rgba(108,78,255,.3); }
+.sc-head b { font-size:20px; display:block; }
+.sc-head .uid { font-size:12px; color:var(--muted); margin-top:2px; }
+.sc-body { padding:0 20px 20px; }
+.kv { display:flex; justify-content:space-between; gap:10px; padding:9px 0; border-bottom:1px dashed var(--line); font-size:13px; }
+.kv:last-child { border-bottom:none; }
+.kv span:first-child { color:var(--muted); }
+.kv b { font-weight:600; }
+.chip { background:var(--purple-050); color:var(--purple-600); border-radius:999px; padding:3px 11px; font-size:11px; font-weight:600; }
+.chip-red { background:var(--red-100); color:#B91C1C; }
+.chip-green { background:var(--green-100); color:#15803D; }
+.chip-orange { background:var(--orange-100); color:#B45309; }
+.chip-blue { background:var(--blue-100); color:#1D4ED8; }
+.chip-line { background:#fff; border:1px solid var(--line); color:var(--ink-2); }
+
+/* ===== الأقسام ===== */
+.vit-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+@media(max-width:900px){ .vit-grid{ grid-template-columns:repeat(2,1fr);} }
+.vit-tile { background:#fff; border:1px solid var(--line); border-radius:18px; padding:16px; text-align:center; transition:.2s; }
+.vit-tile:hover { box-shadow: var(--shadow-sm); }
+.vit-tile .v-num { font-size:24px; font-weight:700; }
+.vit-tile .v-num small { font-size:12px; color:var(--muted); font-weight:600; }
+.vit-tile .v-lab { font-size:12px; color:var(--muted); font-weight:600; margin-top:2px; }
+.vit-tile.warn { border-color: var(--orange); background: #FFFBF2; }
+.vit-tile.crit { border-color: var(--red); background: #FFF7F7; }
+
+/* ===== QR ===== */
+.qr { display:grid; gap:1.5px; background:#fff; border-radius:10px; padding:6px; }
+.qr b { aspect-ratio:1/1; display:block; }
+.qr b.on { background: var(--ink); }
+.qr-wrap { display:inline-block; padding:10px; background:#fff; border:1px solid var(--line); border-radius:18px; }
+
+/* ===== بطاقة المتابعة الصحية ===== */
+.hc-card {
+  width: 360px; border-radius: 24px; overflow:hidden; color:#fff; background: linear-gradient(140deg,#22214A, var(--purple) 70%, #8B5CF6);
+  box-shadow: var(--shadow); font-size: 13px; position:relative;
+}
+.hc-card .hc-top { display:flex; justify-content:space-between; align-items:center; padding:16px 18px 0; }
+.hc-card .hc-brand { display:flex; align-items:center; gap:8px; font-weight:700; font-size:14px; }
+.hc-card .hc-brand .mini { width:30px; height:30px; border-radius:10px; background:#fff; color:var(--purple); display:grid; place-items:center; font-size:15px; }
+.hc-card .hc-body { display:flex; gap:14px; padding:16px 18px; align-items:center; }
+.hc-card .hc-avatar { width:74px; height:74px; border-radius:20px; background:#fff; color:var(--purple); display:grid; place-items:center; font-size:30px; font-weight:700; flex-shrink:0; }
+.hc-card .hc-info b { font-size:17px; display:block; }
+.hc-card .hc-info .u { font-size:11px; opacity:.8; letter-spacing:.5px; }
+.hc-card .hc-rows { padding:0 18px 14px; display:grid; gap:6px; }
+.hc-card .hc-row { display:flex; justify-content:space-between; border-bottom:1px dashed rgba(255,255,255,.25); padding:4px 0; }
+.hc-card .hc-row span:first-child { opacity:.75; }
+.hc-card .hc-qr { display:flex; justify-content:center; padding:6px 0 16px; }
+.hc-card .hc-qr .qr { background:#fff; }
+.hc-card .hc-foot { display:flex; justify-content:space-between; font-size:10.5px; opacity:.85; padding:10px 18px 14px; border-top:1px solid rgba(255,255,255,.2); }
+
+/* ===== إطار الهاتف ===== */
+.phone-frame { width: 350px; margin:0 auto; background:#101020; border-radius:46px; padding:12px; box-shadow: var(--shadow); border:3px solid #26264A; }
+.phone-screen { background:#fff; border-radius:36px; overflow:hidden; min-height:640px; display:flex; flex-direction:column; }
+.phone-status { background:#101020; color:#fff; font-size:11px; padding:9px 20px; display:flex; justify-content:space-between; }
+.phone-body { flex:1; padding:16px; background:linear-gradient(180deg,#F4F2FF,#fff); display:flex; flex-direction:column; gap:12px; overflow-y:auto; }
+.p-app-title { display:flex; align-items:center; justify-content:space-between; }
+.p-app-title b { color:#101020; font-size:16px; }
+.p-card { background:#fff; border-radius:18px; padding:16px; box-shadow: var(--shadow-sm); }
+.p-services { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.p-service { background:#fff; border:1px solid var(--line); border-radius:16px; padding:14px 8px; text-align:center; cursor:pointer; transition:.2s; }
+.p-service:hover { border-color:var(--purple); transform:translateY(-2px); }
+.p-service .ps-ico { font-size:24px; }
+.p-service small { font-size:11px; font-weight:600; color:var(--ink-2); display:block; margin-top:5px; }
+.sos-fab {
+  position: fixed; bottom: 26px; inset-inline-end: 26px; z-index: 200;
+  width: 78px; height: 78px; border-radius: 50%; font-size: 15px; font-weight: 700; color:#fff;
+  background: radial-gradient(circle at 30% 25%, #ff8080, var(--red));
+  box-shadow: 0 14px 34px rgba(239,68,68,.5), inset 0 -6px 14px rgba(0,0,0,.2);
+  display:grid; place-items:center; line-height:1.1; animation: sosPulse 2.4s infinite;
+}
+.sos-fab:hover { transform: scale(1.06); }
+@keyframes sosPulse { 0%{ box-shadow:0 14px 34px rgba(239,68,68,.5), 0 0 0 0 rgba(239,68,68,.35);} 70%{ box-shadow:0 14px 34px rgba(239,68,68,.5), 0 0 0 20px rgba(239,68,68,0);} 100%{ box-shadow:0 14px 34px rgba(239,68,68,.5), 0 0 0 0 rgba(239,68,68,0);} }
+
+/* ===== النوافذ ===== */
+.modal-overlay {
+  position: fixed; inset:0; background:rgba(20,20,45,.5); backdrop-filter:blur(5px); z-index:300;
+  display:flex; align-items:center; justify-content:center; padding:20px; animation:fadeIn .2s ease;
+}
+@keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+.modal {
+  background:#fff; border-radius:26px; width:min(620px, 96vw); max-height:90vh; overflow-y:auto;
+  box-shadow:var(--shadow); animation:popIn .25s ease; padding:0;
+}
+.modal-lg { width:min(880px, 96vw); }
+.modal-sm { width:min(430px, 94vw); }
+@keyframes popIn { from{ transform:scale(.95); opacity:0;} to{ transform:none; opacity:1;} }
+.modal-head { padding:20px 24px; border-bottom:1px solid var(--line); display:flex; align-items:center; gap:12px; position:sticky; top:0; background:#fff; z-index:2; border-radius:26px 26px 0 0; }
+.modal-head h3 { flex:1; font-size:18px; }
+.modal-body { padding:22px 24px; }
+.modal-foot { padding:16px 24px; border-top:1px solid var(--line); display:flex; gap:10px; justify-content:flex-end; position:sticky; bottom:0; background:#fff; }
+
+/* ===== التنبيهات ===== */
+.toasts { position:fixed; bottom:22px; inset-inline-start:22px; z-index:400; display:flex; flex-direction:column; gap:10px; max-width:360px; }
+.toast {
+  background:#fff; border-radius:16px; box-shadow:var(--shadow); padding:14px 18px; display:flex; align-items:flex-start; gap:12px;
+  font-size:14px; border-inline-start:4px solid var(--purple); animation:slideUp .3s ease;
+}
+.toast-success { border-inline-start-color: var(--green); }
+.toast-error { border-inline-start-color: var(--red); }
+.toast-warning { border-inline-start-color: var(--orange); }
+@keyframes slideUp { from{ transform:translateY(14px); opacity:0;} to{ transform:none; opacity:1;} }
+
+/* ===== قوائم الطوارئ ===== */
+.alert-row { display:flex; gap:12px; padding:13px 0; border-bottom:1px solid var(--line); align-items:flex-start; }
+.alert-row:last-child { border-bottom:none; }
+.alert-row .a-ico { width:38px; height:38px; border-radius:12px; display:grid; place-items:center; font-size:17px; flex-shrink:0; }
+.alert-row b { font-size:14px; display:block; }
+.alert-row .small { color:var(--muted); }
+
+/* ===== خيوط/خط زمني ===== */
+.timeline { position:relative; padding-inline-start:24px; }
+.timeline::before { content:''; position:absolute; inset-inline-start:8px; top:6px; bottom:6px; width:2px; background:var(--line); }
+.tl-item { position:relative; padding-bottom:16px; }
+.tl-item::before { content:''; position:absolute; inset-inline-start:-21px; top:5px; width:10px; height:10px; border-radius:50%; background:var(--purple); border:2px solid #fff; box-shadow:0 0 0 2px var(--purple-100); }
+.tl-item b { font-size:14px; display:block; }
+.tl-item .small { color:var(--muted); }
+
+/* ===== خط مؤشرات ===== */
+.chart-card svg { width:100%; height:auto; display:block; }
+
+/* ===== خريطة الزيارات ===== */
+.empty-state { text-align:center; padding:40px 16px; color:var(--muted); }
+.empty-state .big { font-size:44px; margin-bottom:10px; }
+
+/* ===== الطباعة ===== */
+#print-area { display:none; }
+@media print {
+  body * { visibility:hidden; }
+  #print-area, #print-area * { visibility:visible; }
+  #print-area { display:block; position:fixed; inset:0; background:#fff; padding:20px; }
+  .hc-card { box-shadow:none; }
+}
+
+/* ===== شريط تنقل سفلي للجوال ===== */
+.bottom-nav { display:none; position:fixed; bottom:0; inset-inline:0; z-index:150; background:rgba(255,255,255,.92); backdrop-filter:blur(14px); border-top:1px solid var(--line); }
+.bottom-nav-inner { display:flex; overflow-x:auto; }
+.bn-item { flex:1; min-width:70px; text-align:center; padding:10px 4px 12px; color:var(--muted); font-size:10px; font-weight:600; }
+.bn-item .bn-ico { font-size:20px; display:block; margin-bottom:2px; }
+.bn-item.active { color:var(--purple); }
+@media (max-width: 860px) {
+  .shell { grid-template-columns: 1fr; }
+  .sidebar { display:none; }
+  .bottom-nav { display:block; }
+  .main { padding: 18px 14px 90px; }
+  .brand-text small { display:none; }
+  .user-chip .meta { display:none; }
+  .search-box { max-width: none; }
+}
+
+/* ===== محرر الملف ===== */
+.grid-main { display:grid; grid-template-columns: minmax(0,1fr) 370px; gap:20px; align-items:start; }
+@media (max-width:1150px){ .grid-main{ grid-template-columns:1fr; } .side-panel{ position:static; } }
+
+/* ===== صور رمزية افتراضية ===== */
+.avatar-1 { background: linear-gradient(135deg,#8B5CF6,#6C4EFF); }
+.avatar-2 { background: linear-gradient(135deg,#3B82F6,#22C55E); }
+.avatar-3 { background: linear-gradient(135deg,#F59E0B,#EF4444); }
+.avatar-4 { background: linear-gradient(135deg,#06B6D4,#6C4EFF); }
+.avatar-5 { background: linear-gradient(135deg,#EC4899,#8B5CF6); }
+</style>
+</head>
+<body>
+
+<div id="app"></div>
+<div id="modals"></div>
+<div id="toasts" class="toasts"></div>
+
+<script>
+/* ============================================================
+   VITALINK DZ — نبض الرعاية المتصل
+   النموذج الأولي الموحد (HTML + CSS + JS + البيانات التجريبية)
+   بنية قابلة للتوسع:
+   - طبقة بيانات (DB) قابلة للاستبدال بـ RealmDB (Offline)
+   - واجهات منظمة عبر Router
+   - جاهزة للتحويل: WebView (Android/iOS) و Electron (سطح المكتب)
+   صاحبة المشروع: رجاء بن إسماعيل — إدارة أعمال سياحية
+   ============================================================ */
+
+/* ============ 1. الهوية ============ */
+const APP = {
+  platform: 'VITALINK DZ',
+  tag: 'نبض الرعاية المتصل',
+  app: 'VITAL DZ',
+  appTag: 'التطبيق الذكي للمتابعة والرعاية',
+  researcher: 'رجاء بن إسماعيل',
+  email: 'rajaaben1805@gmail.com',
+  college: 'كلية العلوم الاقتصادية والتجارية وعلوم التسيير',
+  major: 'إدارة أعمال سياحية',
+  year: '2025/2026',
+};
+
+/* ============ 2. أدوات مساعدة ============ */
+function esc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+function uid() { return 'x-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7); }
+function hashStr(s) { let h = 0; for (let i = 0; i < s.length; i++) { h = (h << 5) - h + s.charCodeAt(i) | 0; } return Math.abs(h); }
+function mulberry32(a) { return function () { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+function ageOf(birthISO) {
+  if (!birthISO) return '—';
+  const b = new Date(birthISO), n = new Date();
+  let a = n.getFullYear() - b.getFullYear();
+  const m = n.getMonth() - b.getMonth();
+  if (m < 0 || (m === 0 && n.getDate() < b.getDate())) a--;
+  return a;
+}
+function fmtDate(iso) {
+  if (!iso) return '—';
+  const d = new Date(iso);
+  return d.toLocaleString('ar-DZ', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+}
+function fmtDay(iso) {
+  if (!iso) return '—';
+  const d = new Date(iso);
+  return d.toLocaleDateString('ar-DZ', { day: '2-digit', month: '2-digit', year: 'numeric' });
+}
+function avatarOf(name, cls, size) {
+  const ch = esc((name || '؟').trim().charAt(0) || '؟');
+  const c = cls || 'avatar-1';
+  return '<div class="avatar ' + c + '" style="' + (size ? 'width:' + size + 'px;height:' + size + 'px;font-size:' + Math.round(size * 0.42) + 'px' : '') + '">' + ch + '</div>';
+}
+
+/* ============ 3. البطاقة الذكية / QR ============ */
+function qrCells(seedStr) {
+  const n = 21;
+  const rnd = mulberry32(hashStr(seedStr));
+  const cells = [];
+  for (let i = 0; i < n; i++) { const row = []; for (let j = 0; j < n; j++) row.push(rnd() > 0.52 ? 1 : 0); cells.push(row); }
+  const pat = (y, x) => (x === 0 || x === 6 || y === 0 || y === 6 || (x >= 2 && x <= 4 && y >= 2 && y <= 4));
+  for (let y = 0; y < 7; y++) for (let x = 0; x < 7; x++) cells[y][x] = pat(y, x) ? 1 : 0;
+  for (let y = 0; y < 7; y++) for (let x = n - 7; x < n; x++) cells[y][x] = pat(y, x - (n - 7)) ? 1 : 0;
+  for (let y = n - 7; y < n; y++) for (let x = 0; x < 7; x++) cells[y][x] = pat(y - (n - 7), x) ? 1 : 0;
+  return cells;
+}
+function renderQR(seedStr, px) {
+  const cells = qrCells(seedStr);
+  return '<div class="qr" style="width:' + (px || 160) + 'px;grid-template-columns:repeat(' + cells.length + ',1fr)">' +
+    cells.map(row => row.map(c => '<b class="' + (c ? 'on' : '') + '"></b>').join('')).join('') + '</div>';
+}
+
+/* ============ 4. طبقة البيانات (جاهزة للاستبدال بـ RealmDB) ============ */
+const DB = {
+  tables: ['users', 'patients', 'vitals', 'protocols', 'alerts', 'dass', 'agencies', 'hotels', 'institutions', 'guides', 'escorts', 'packages', 'trips', 'qrLog'],
+  data: {},
+  init() {
+    this.tables.forEach(t => { this.data[t] = []; });
+    let cached = null;
+    try { cached = JSON.parse(localStorage.getItem('vdz_db')); } catch (e) { cached = null; }
+    if (cached && cached.users && cached.users.length) this.data = cached;
+    else { this.seed(); this.save(); }
+    this.touch();
+  },
+  seed() { Object.assign(this.data, seedData()); },
+  save() { try { localStorage.setItem('vdz_db', JSON.stringify(this.data)); } catch (e) { /* الحجم قد يتجاوز أو وضع خاص */ } },
+  touch() { this.tables.forEach(t => { this.data[t] = this.data[t] || []; }); },
+  find(t, fn) { this.touch(); return (this.data[t] || []).find(fn); },
+  findMany(t, fn) { this.touch(); return (this.data[t] || []).filter(fn); },
+  all(t) { this.touch(); return this.data[t].slice(); },
+  insert(t, row) { this.touch(); this.data[t].push(row); this.save(); return row; },
+  reset() { try { localStorage.removeItem('vdz_db'); } catch (e) {} this.init(); },
+  logQR(e) { this.insert('qrLog', Object.assign({ id: uid(), at: new Date().toISOString() }, e)); }
+};
+
+/* ============ 5. البيانات التجريبية ============ */
+function seedData() {
+  const now = new Date();
+  const days = (n) => new Date(now.getTime() - n * 864e5).toISOString();
+  const hours = (n) => new Date(now.getTime() - n * 36e5).toISOString();
+
+  const users = [
+    { id: 'u-admin', role: 'admin', name: 'المدير الوطني', phone: '0551000101', email: 'admin@vitalink.dz', facility: 'وزارة الصحة', avatar: 'avatar-1' },
+    { id: 'u-hosp', role: 'hospital', name: 'د. يوسف باحمد', phone: '0555001101', email: 'doctor@health.gov.dz', facility: 'المستشفى الجامعي — قسنطينة', specialty: 'طب عام — أمراض مزمنة', avatar: 'avatar-2' },
+    { id: 'u-nurse', role: 'nurse', name: 'ياسين عمارة', phone: '0555002202', email: 'nurse@health.gov.dz', facility: 'الوحدة المتنقلة — قسنطينة', avatar: 'avatar-3' },
+    { id: 'u-dass', role: 'dass', name: 'فاطمة زهرة', phone: '0555003303', email: 'dass@social.gov.dz', facility: 'مديرية النشاط الاجتماعي', avatar: 'avatar-4' },
+    { id: 'u-family', role: 'family', name: 'عمر بن يوسف', phone: '0661998877', email: 'family@vitalink.dz', relation: 'ابن', avatar: 'avatar-5' },
+  ];
+
+  const patients = [
+    {
+      id: 'p-1', role: 'patient', name: 'الحاج محمد بن أحمد', birth: '1949-03-14', gender: 'ذكر',
+      phone: '0661112233', address: 'الجزائر العاصمة — حي باب الوادي', wilaya: 16, bloodType: 'O+',
+      category: 'elderly', categoryName: 'مسن', uid: 'VIT-1001', fileNo: 'F-2026-001', avatar: 'avatar-1',
+      chronic: ['ارتفاع ضغط الدم', 'السكري من النوع الثاني'], allergies: ['البنسلين'],
+      medications: [{ name: 'Metformin 500mg', dose: 'مرتين يومياً' }, { name: 'Enalapril 10mg', dose: 'مرة يومياً' }],
+      doctorId: 'u-hosp', nurseId: 'u-nurse', familyId: 'u-family', companionId: 'u-family',
+      social: { livesAlone: false, state: 'متزوج', aids: ['كرسي متحرك'] },
+      index: 'orange', status: 'follow', lastVisit: hours(2), protocolId: 'pr-1',
+      monitor: { bp: '145/90', glucose: '1.35', spo2: 96 },
+    },
+    {
+      id: 'p-2', role: 'patient', name: 'أمير سعدون', birth: '2016-06-22', gender: 'ذكر',
+      phone: '0662223344', address: 'وهران — حي بئر الجير', wilaya: 31, bloodType: 'B+',
+      category: 'child', categoryName: 'طفل مريض', uid: 'VIT-1002', fileNo: 'F-2026-002', avatar: 'avatar-2',
+      guardian: { name: 'سعاد سعدون', phone: '0771223344', relation: 'الأم' },
+      chronic: ['الربو'], allergies: ['الغبار', 'حبوب اللقاح'],
+      vaccinations: ['التلقيح الخماسي', 'شلل الأطفال', 'الكزاز'],
+      medications: [{ name: 'Ventolin 100mcg', dose: 'عند الحاجة' }],
+      doctorId: 'u-hosp', nurseId: 'u-nurse',
+      social: { livesAlone: false, state: 'طفل' },
+      index: 'green', status: 'stable', lastVisit: days(3), protocolId: null,
+      monitor: { bp: '100/65', glucose: '0.95', spo2: 98 },
+    },
+    {
+      id: 'p-3', role: 'patient', name: 'قاسم عبد الرحمن', birth: '1961-09-05', gender: 'ذكر',
+      phone: '0663334455', address: 'سطيف — حي العالية', wilaya: 19, bloodType: 'A-',
+      category: 'chronic', categoryName: 'مريض مزمن', uid: 'VIT-1003', fileNo: 'F-2026-003', avatar: 'avatar-3',
+      chronic: ['مرض القلب التاجي', 'السكري'], allergies: ['الأسبرين'],
+      medications: [{ name: 'Aspirin 100mg', dose: 'مرة يومياً' }, { name: 'Insulin', dose: 'حسب الجرعة' }],
+      doctorId: 'u-hosp', nurseId: 'u-nurse',
+      social: { livesAlone: true, state: 'أرمل' },
+      index: 'red', status: 'danger', lastVisit: hours(1), protocolId: 'pr-3',
+      monitor: { bp: '168/100', glucose: '2.10', spo2: 91 },
+    },
+    {
+      id: 'p-4', role: 'patient', name: 'بن سالم خديجة', birth: '1972-12-01', gender: 'أنثى',
+      phone: '0664445566', address: 'سيدي بلعباس', wilaya: 22, bloodType: 'AB+',
+      category: 'disability', categoryName: 'وضعية إعاقة', uid: 'VIT-1004', fileNo: 'F-2026-004', avatar: 'avatar-4',
+      disability: { type: 'حركية', percent: 65, devices: ['كرسي متحرك كهربائي'] },
+      chronic: ['التصلب المتعدد'], allergies: [],
+      medications: [{ name: 'Interferon', dose: 'أسبوعياً' }],
+      doctorId: 'u-hosp', nurseId: 'u-nurse', companionId: 'u-family',
+      social: { livesAlone: false, state: 'مطلقة', aids: ['منحة إعاقة'] },
+      index: 'orange', status: 'follow', lastVisit: days(2), protocolId: 'pr-4',
+      monitor: { bp: '128/82', glucose: '1.05', spo2: 97 },
+    },
+    {
+      id: 'p-5', role: 'patient', name: 'مرابط زهرة', birth: '1955-04-18', gender: 'أنثى',
+      phone: '0665556677', address: 'غرداية — المدينة', wilaya: 47, bloodType: 'O-',
+      category: 'elderly', categoryName: 'مسن', uid: 'VIT-1005', fileNo: 'F-2026-005', avatar: 'avatar-5',
+      chronic: ['السكري'], allergies: [],
+      medications: [{ name: 'Metformin 850mg', dose: 'مرتين يومياً' }],
+      doctorId: 'u-hosp', nurseId: 'u-nurse',
+      social: { livesAlone: true, state: 'أرملة', aids: ['مستفيدة من DASS'] },
+      index: 'green', status: 'stable', lastVisit: days(5), protocolId: 'pr-5',
+      tourismId: 'tp-1',
+      monitor: { bp: '120/78', glucose: '1.40', spo2: 98 },
+    },
+  ];
+
+  const vitals = [
+    { id: 'v-1', patientId: 'p-1', bpSys: 152, bpDia: 94, glucose: 1.80, pulse: 88, temp: 36.8, spo2: 96, weight: 74, source: 'ممرض متنقل', by: 'ياسين عمارة', note: 'قياس صباحي', at: hours(6) },
+    { id: 'v-2', patientId: 'p-1', bpSys: 144, bpDia: 90, glucose: 1.60, pulse: 84, temp: 36.6, spo2: 97, weight: 73.5, source: 'ممرض متنقل', by: 'ياسين عمارة', note: '', at: hours(30) },
+    { id: 'v-3', patientId: 'p-3', bpSys: 168, bpDia: 100, glucose: 2.10, pulse: 96, temp: 37.1, spo2: 91, weight: 82, source: 'طبيب', by: 'د. يوسف باحمد', note: 'ارتفاع ملحوظ', at: hours(1) },
+    { id: 'v-4', patientId: 'p-3', bpSys: 160, bpDia: 96, glucose: 1.95, pulse: 92, temp: 36.9, spo2: 93, weight: 82.4, source: 'ممرض متنقل', by: 'ياسين عمارة', note: '', at: hours(26) },
+    { id: 'v-5', patientId: 'p-4', bpSys: 128, bpDia: 82, glucose: 1.05, pulse: 78, temp: 36.5, spo2: 97, weight: 61, source: 'ممرض متنقل', by: 'ياسين عمارة', note: '', at: hours(50) },
+    { id: 'v-6', patientId: 'p-5', bpSys: 120, bpDia: 78, glucose: 1.40, pulse: 74, temp: 36.4, spo2: 98, weight: 66, source: 'ممرض متنقل', by: 'ياسين عمارة', note: '', at: hours(80) },
+  ];
+
+  const protocols = [
+    {
+      id: 'pr-1', patientId: 'p-1', name: 'بروتوكول ضبط السكري والضغط', type: 'علاجي', doctor: 'د. يوسف باحمد',
+      start: days(30), review: days(7), status: 'active',
+      meds: ['Metformin 500mg — مرتين يومياً', 'Enalapril 10mg — صباحاً'],
+      appointments: ['متابعة شهرية', 'فحص النظر خلال أسبوعين'],
+      required: ['سكر الصائم', 'ضغط الدم يومياً'],
+      tests: ['HbA1c كل 3 أشهر', 'وظائف الكلى'],
+      instructions: 'تجنب السكريات، قياس السكر صباحاً قبل الأكل.',
+      log: [{ at: days(30), by: 'د. يوسف باحمد', action: 'إنشاء البروتوكول' }, { at: days(7), by: 'د. يوسف باحمد', action: 'مراجعة وتحديث الجرعات' }],
+    },
+    {
+      id: 'pr-3', patientId: 'p-3', name: 'بروتوكول استقرار القلب والسكري', type: 'طوارئ', doctor: 'د. يوسف باحمد',
+      start: days(14), review: days(3), status: 'active',
+      meds: ['Aspirin 100mg', 'Insulin حسب الجرعة'],
+      appointments: ['زيارة أسبوعية'],
+      required: ['ECG', 'سكر', 'ضغط'],
+      tests: ['تخطيط القلب', 'تحليل السكر التراكمي'],
+      instructions: 'ممنوع المشي الطويل، الاتصال الفوري عند ألم الصدر.',
+      log: [{ at: days(14), by: 'د. يوسف باحمد', action: 'إنشاء البروتوكول' }],
+    },
+    {
+      id: 'pr-4', patientId: 'p-4', name: 'بروتوكول إعادة التأهيل الحركي', type: 'تأهيلي', doctor: 'د. يوسف باحمد',
+      start: days(20), review: days(10), status: 'active',
+      meds: ['Interferon أسبوعياً'],
+      appointments: ['حصة علاج طبيعي 3 مرات أسبوعياً'],
+      required: ['قياس القدرة الحركية'],
+      tests: ['تصوير الرنين'],
+      instructions: 'استخدام الكرسي الكهربائي، حضور الحصص.',
+      log: [{ at: days(20), by: 'د. يوسف باحمد', action: 'إنشاء البروتوكول' }],
+    },
+    {
+      id: 'pr-5', patientId: 'p-5', name: 'بروتوكول متابعة مسن معزول', type: 'متابعة', doctor: 'د. يوسف باحمد',
+      start: days(40), review: days(12), status: 'active',
+      meds: ['Metformin 850mg'],
+      appointments: ['زيارة منزلية أسبوعية'],
+      required: ['سكر', 'ضغط'],
+      tests: [],
+      instructions: 'التواصل الأسبوعي مع الوكالة أثناء الرحلة العلاجية.',
+      log: [{ at: days(40), by: 'د. يوسف باحمد', action: 'إنشاء البروتوكول' }],
+    },
+  ];
+
+  const alerts = [
+    { id: 'a-1', type: 'critical', icon: '🔴', title: 'تغير مهم في مؤشر صحي', message: 'سجل قاسم عبد الرحمن ضغط 168/100 وأكسجين 91% — حالة حرجة.', patientId: 'p-3', at: hours(1), read: false },
+    { id: 'a-2', type: 'warning', icon: '🟠', title: 'حان موعد تسجيل المؤشرات', message: 'لم تُسجل قياسات الحاج محمد منذ 6 ساعات.', patientId: 'p-1', at: hours(3), read: false },
+    { id: 'a-3', type: 'info', icon: '🔵', title: 'موعد طبي قادم', message: 'موعد مراجعة بروتوكول مرابط زهرة بعد غد 10:00.', patientId: 'p-5', at: hours(5), read: false },
+    { id: 'a-4', type: 'reminder', icon: '⚪', title: 'تذكير بالجرعة', message: 'تذكير بتناول دواء Metformin للحاج محمد.', patientId: 'p-1', at: hours(4), read: false },
+  ];
+
+  const dass = [
+    { id: 'd-1', patientId: 'p-4', type: 'مساعدة أجهزة', details: 'طلب تجديد الكرسي المتحرك الكهربائي', status: 'under_study', at: days(3), note: '' },
+    { id: 'd-2', patientId: 'p-3', type: 'متابعة أسبوعية', details: 'تنسيق المتابعة مع الوحدة المتنقلة', status: 'accepted', at: days(6), note: 'تمت الموافقة والتنسيق.' },
+    { id: 'd-3', patientId: 'p-5', type: 'مساعدة مالية', details: 'دعم مالي للمسن المعزول', status: 'pending', at: days(1), note: '' },
+  ];
+
+  const agencies = [
+    { id: 'ag-1', name: 'وكالة صحراء فيتا', city: 'غرداية', phone: '0555004404', rating: 4.8 },
+    { id: 'ag-2', name: 'حمامات الجزائر تور', city: 'وهران', phone: '0555006606', rating: 4.5 },
+  ];
+  const hotels = [
+    { id: 'h-1', name: 'فندق زلفانة بالم', city: 'زلفانة — غرداية', stars: 4 },
+    { id: 'h-2', name: 'فندق الأوراسي', city: 'بوحنيفية — معسكر', stars: 4 },
+  ];
+  const institutions = [
+    { id: 'ins-1', name: 'المستشفى الجامعي — قسنطينة', city: 'قسنطينة' },
+    { id: 'ins-2', name: 'مركز بوحنيفية الحراري', city: 'معسكر' },
+    { id: 'ins-3', name: 'مصحات قالمة الحموية', city: 'قالمة' },
+  ];
+  const guides = [
+    { id: 'g-1', name: 'المرشد إبراهيم بوزيد', city: 'غرداية', phone: '0555005505', rating: 4.9 },
+    { id: 'g-2', name: 'المرشدة لامية شريف', city: 'قالمة', phone: '0555009909', rating: 4.7 },
+  ];
+  const escorts = [
+    { id: 'e-1', name: 'الممرضة سارة بلقاسم', phone: '0555010101', city: 'غرداية' },
+    { id: 'e-2', name: 'الممرض رياض حملاوي', phone: '0555010202', city: 'معسكر' },
+  ];
+
+  const packages = [
+    { id: 'pk-1', name: 'العلاج بالمياه المعدنية', type: 'علاج مائي', icon: '♨️', destination: 'زلفانة — غرداية', duration: '7 أيام', price: 24500, desc: 'جلسات حموية يومية مع مرافقة طبية.' },
+    { id: 'pk-2', name: 'العلاج الطبيعي وإعادة التأهيل', type: 'تأهيلي', icon: '🦴', destination: 'بوحنيفية — معسكر', duration: '10 أيام', price: 32000, desc: 'برنامج رياضي خفيف تحت إشراف مختص.' },
+    { id: 'pk-3', name: 'الاستجمام العلاجي', type: 'استجمام', icon: '🌴', destination: 'تاغيت — بشار', duration: '6 أيام', price: 28000, desc: 'رمال علاجية وإقامة سياحية هادئة.' },
+    { id: 'pk-4', name: 'رحلات ثقافية مرافقة طبياً', type: 'ثقافي', icon: '🏛️', destination: 'قالمة', duration: '5 أيام', price: 21000, desc: 'جولات الحموات مع مرافق صحي.' },
+    { id: 'pk-5', name: 'الإقامة العلاجية الكاملة', type: 'إقامة', icon: '🏨', destination: 'مصحات قالمة', duration: '8 أيام', price: 26500, desc: 'إقامة كاملة مع علاجات ومتابعة طبية.' },
+    { id: 'pk-6', name: 'Active Aging', type: 'نشاط', icon: '💪', destination: 'وهران', duration: '7 أيام', price: 19000, desc: 'برنامج نشاط بدني واجتماعي لكبار السن.' },
+  ];
+
+  const trips = [
+    {
+      id: 'tp-1', number: 'TP-2026-001', patientId: 'p-5', packageId: 'pk-1',
+      beneficiary: 'مرابط زهرة', status: 'confirmed', start: days(-2), end: new Date(now.getTime() + 5 * 864e5).toISOString(),
+      hotel: 'فندق زلفانة بالم', institution: 'مركز زلفانة الحراري', doctor: 'د. يوسف باحمد', nurse: 'الممرضة سارة بلقاسم',
+      guide: 'المرشد إبراهيم بوزيد', agency: 'وكالة صحراء فيتا', transport: 'نقل مكيف خاص',
+      services: ['جلسات حموية يومية', 'إقامة كاملة', 'مرافقة طبية 24/7'],
+      needs: { health: 'مراقبة سكر يومية', special: 'يستخدم عكازة', transport: 'نقل مكيف' },
+    },
+  ];
+
+  return { users, patients, vitals, protocols, alerts, dass, agencies, hotels, institutions, guides, escorts, packages, trips, qrLog: [] };
+}
+
+/* ============ 6. عناصر الواجهة ============ */
+const UI = {
+  toast(msg, type) {
+    const box = document.getElementById('toasts');
+    const el = document.createElement('div');
+    el.className = 'toast toast-' + (type || '');
+    const icon = type === 'error' ? '✕' : type === 'success' ? '✓' : type === 'warning' ? '⚠' : 'ⓘ';
+    el.innerHTML = '<span>' + icon + '</span><span>' + esc(msg) + '</span>';
+    box.appendChild(el);
+    setTimeout(() => { el.style.opacity = '0'; el.style.transition = 'opacity .3s'; setTimeout(() => el.remove(), 320); }, 4200);
+  },
+  open(html, size) {
+    const host = document.getElementById('modals');
+    const ov = document.createElement('div');
+    ov.className = 'modal-overlay';
+    ov.innerHTML = '<div class="modal ' + (size || '') + '">' + html + '</div>';
+    ov.addEventListener('click', (e) => { if (e.target === ov) UI.close(ov); });
+    host.appendChild(ov);
+    document.body.style.overflow = 'hidden';
+    const c = ov.querySelector('[data-close]');
+    if (c) c.addEventListener('click', () => UI.close(ov));
+    return ov;
+  },
+  close(ov) { if (ov) ov.remove(); else document.getElementById('modals').innerHTML = ''; document.body.style.overflow = ''; },
+  head(title, icon) {
+    return '<div class="modal-head"><span class="brand-logo" style="width:38px;height:38px;font-size:17px;border-radius:12px">' + (icon || '📋') + '</span><h3>' + esc(title) + '</h3><button class="icon-btn" data-close>✕</button></div>';
+  },
+  confirm(msg, onOk, okLabel, danger) {
+    const ov = UI.open(
+      UI.head('تأكيد', '⚠️') +
+      '<div class="modal-body"><p style="font-size:15px">' + esc(msg) + '</p></div>' +
+      '<div class="modal-foot"><button class="btn btn-line" data-close>إلغاء</button><button class="btn ' + (danger ? 'btn-danger' : 'btn-primary') + '" id="cf-ok">' + esc(okLabel || 'تأكيد') + '</button></div>',
+      'modal-sm'
+    );
+    ov.querySelector('#cf-ok').addEventListener('click', () => { UI.close(ov); onOk(); });
+  },
+  statusBadge(index) {
+    const map = {
+      green: '<span class="badge badge-green"><span class="dot dot-green"></span> مستقر</span>',
+      orange: '<span class="badge badge-orange"><span class="dot dot-orange"></span> يحتاج متابعة</span>',
+      red: '<span class="badge badge-red"><span class="dot dot-red"></span> خطر</span>',
+    };
+    return map[index] || '<span class="badge badge-gray">' + esc(index) + '</span>';
+  },
+  catBadge(cat) {
+    const map = { elderly: '<span class="chip">👴 مسن</span>', child: '<span class="chip chip-blue">👶 طفل</span>', chronic: '<span class="chip chip-orange">💊 مزمن</span>', disability: '<span class="chip chip-purple">♿ إعاقة</span>' };
+    return map[cat] || '<span class="chip">' + esc(cat) + '</span>';
+  },
+  contactBtns(phone, opts) {
+    const p = phone || '';
+    return '<div class="flex gap-8 flex-wrap mt-12">' +
+      '<a class="btn btn-line btn-sm" href="tel:' + esc(p) + '" target="_blank">☎ اتصال</a>' +
+      (p ? '<a class="btn btn-success btn-sm" href="https://wa.me/' + esc(String(p).replace(/[^\d]/g, '')) + '" target="_blank">💬 WhatsApp</a>' : '') +
+      (opts || '') + '</div>';
+  },
+  sparkline(vals, w, h) {
+    if (!vals || !vals.length) return '<p class="small muted">لا بيانات بعد</p>';
+    const max = Math.max.apply(null, vals), min = Math.min.apply(null, vals);
+    const span = (max - min) || 1;
+    const pts = vals.map((v, i) => (i / (vals.length - 1)) * w + ',' + (h - 4 - ((v - min) / span) * (h - 14))).join(' ');
+    return '<svg viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none"><polyline fill="none" stroke="#6C4EFF" stroke-width="2.5" stroke-linejoin="round" points="' + pts + '"/></svg>';
+  },
+  empty(icon, text) { return '<div class="empty-state"><div class="big">' + icon + '</div>' + esc(text) + '</div>'; },
+};
+
+/* ============ 7. الحالة والمستودع ============ */
+const Store = {
+  user: null,
+  role: null,
+  offline: false,
+  selectedId: null,
+  searchText: '',
+  view: 'home',
+  get patients() { return DB.all('patients'); },
+  get staff() { return DB.all('users'); },
+  patient(id) { return DB.find('patients', p => p.id === id); },
+  userById(id) { return DB.find('users', u => u.id === id); },
+  personName(id) { const u = this.userById(id); return u ? u.name : '—'; },
+  vitalsOf(pid) { return DB.findMany('vitals', v => v.patientId === pid).sort((a, b) => new Date(a.at) - new Date(b.at)); },
+  protocolOf(pid) { return DB.find('protocols', p => p.patientId === pid); },
+  tripOf(pid) { return DB.find('trips', t => t.patientId === pid); },
+  unread() { return DB.findMany('alerts', a => !a.read).length; },
+  connected() { return !this.offline && navigator.onLine; },
+  login(role) {
+    const map = { admin: 'u-admin', hospital: 'u-hosp', nurse: 'u-nurse', dass: 'u-dass', family: 'u-family', patient: null };
+    this.role = role;
+    this.user = role === 'patient' ? this.patients[0] : this.userById(map[role]);
+    this.selectedId = role === 'patient' ? this.user.id : null;
+    Router.go(this.defaultView());
+  },
+  logout() { this.user = null; this.role = null; this.offline = false; this.selectedId = null; Router.go('home'); },
+  defaultView() {
+    const map = { admin: 'dashboard', hospital: 'doctor', nurse: 'nurse', dass: 'dass', family: 'family', patient: 'mobile' };
+    return map[this.role] || 'home';
+  },
+  navItems() {
+    const m = {
+      admin: [['dashboard', '📊', 'لوحة التحكم'], ['patients', '🧑‍🤝‍🧑', 'المستفيدون'], ['tourism', '🧳', 'السياحة العلاجية'], ['qr', '📷', 'الماسح الذكي'], ['card', '🪪', 'بطاقة المتابعة']],
+      hospital: [['doctor', '🩺', 'بوابة المستشفى'], ['patients', '🧑‍🤝‍🧑', 'الملفات'], ['tourism', '🧳', 'المسارات العلاجية'], ['qr', '📷', 'الماسح الذكي']],
+      nurse: [['nurse', '💉', 'بوابة الممرض'], ['patients', '🧑‍🤝‍🧑', 'الملفات'], ['qr', '📷', 'الماسح الذكي']],
+      dass: [['dass', '🏛️', 'لوحة DASS'], ['patients', '🧑‍🤝‍🧑', 'المستفيدون']],
+      family: [['family', '👨‍👩‍👧', 'متابعة العائلة'], ['mobile', '📱', 'تطبيق VITAL DZ']],
+      patient: [['mobile', '📱', 'تطبيق VITAL DZ'], ['myfile', '❤️', 'ملفي الصحي'], ['mytrip', '🧳', 'برنامجي السياحي']],
+    };
+    return m[this.role] || [];
+  },
+};
+
+/* ============ 8. الموجّه Router ============ */
+const Router = {
+  views: {},
+  register(name, def) { this.views[name] = def; },
+  go(name, param) {
+    const v = this.views[name];
+    if (!v) { this.go('home'); return; }
+    Store.view = name;
+    const user = Store.user;
+    const isAuthView = ['home', 'login'].includes(name);
+    if (!user && !isAuthView) { this.go('login'); return; }
+    if (user && v.roles && !v.roles.includes(Store.role) && !isAuthView) { this.go(Store.defaultView()); return; }
+    if (user && isAuthView) { this.go(Store.defaultView()); return; }
+    this.paint(v, param);
+  },
+  async paint(v, param) {
+    const app = document.getElementById('app');
+    app.innerHTML = '';
+    const wrap = document.createElement('div');
+    wrap.className = 'view-wrap';
+    app.appendChild(wrap);
+    try {
+      const html = await v.render(param);
+      wrap.innerHTML = html;
+      if (v.bind) v.bind(wrap, param);
+      if (Store.user) this.shellSync();
+    } catch (e) {
+      console.error('[view]', e);
+      wrap.innerHTML = UI.empty('😔', 'حدث خطأ غير متوقع: ' + e.message);
+    }
+  },
+  shellSync() {
+    const topbar = document.getElementById('topbar');
+    const side = document.getElementById('sidebar');
+    const bottom = document.getElementById('bottom-nav');
+    const sos = document.getElementById('sos-fab');
+    if (topbar) {
+      const conn = topbar.querySelector('#conn-pill');
+      if (conn) conn.className = 'conn-pill ' + (Store.connected() ? 'conn-on' : 'conn-off');
+      const un = topbar.querySelector('#bell-count');
+      if (un) { un.textContent = Store.unread(); un.style.display = Store.unread() ? 'grid' : 'none'; }
+    }
+    if (side) {
+      side.querySelectorAll('.nav-item').forEach((b) => b.classList.toggle('active', b.dataset.nav === Store.view));
+    }
+    if (bottom) {
+      bottom.querySelectorAll('.bn-item').forEach((b) => b.classList.toggle('active', b.dataset.nav === Store.view));
+    }
+    if (sos) sos.style.display = 'grid';
+  },
+};
+
+/* ============ 9. بحث ذكي ============ */
+function renderSearchResults(box, q) {
+  const host = document.getElementById('search-results');
+  if (!q) { host.classList.remove('open'); host.innerHTML = ''; return; }
+  const ql = q.toLowerCase();
+  const res = DB.all('patients').filter(p =>
+    p.name.toLowerCase().includes(ql) || p.uid.toLowerCase().includes(ql) || p.fileNo.toLowerCase().includes(ql)
+  );
+  if (!res.length) { host.classList.remove('open'); return; }
+  host.innerHTML = res.map(p =>
+    '<div class="sr-item" data-sid="' + p.id + '">' + avatarOf(p.name, p.avatar, 36) +
+    '<div><b>' + esc(p.name) + '</b><div class="small muted">' + esc(p.uid) + ' • ' + esc(p.fileNo) + '</div></div>' +
+    UI.statusBadge(p.index) + '</div>'
+  ).join('');
+  host.classList.add('open');
+  host.querySelectorAll('[data-sid]').forEach((it) => it.addEventListener('click', () => {
+    host.classList.remove('open');
+    document.getElementById('search-inp').value = '';
+    Store.selectedId = it.dataset.sid;
+    Router.go('patients');
+    Router.paint(Router.views['patients']);
+  }));
+}
+
+/* ============ 10. الهيكل العام ============ */
+function shellTopbar() {
+  const u = Store.user;
+  return '<div class="topbar" id="topbar"><div class="container topbar-inner">' +
+    '<div class="brand" onclick="Router.go(\'' + Store.defaultView() + '\')">' +
+    '<div class="brand-logo">⚕️</div>' +
+    '<div class="brand-text"><b>VITAL <span>DZ</span></b><small>' + esc(APP.tag) + '</small></div></div>' +
+    '<div class="search-box"><input id="search-inp" placeholder="بحث: الاسم، اللقب، UID، رقم الملف..." autocomplete="off">' +
+    '<span class="s-ico">🔍</span><div class="search-results" id="search-results"></div></div>' +
+    '<div class="conn-pill ' + (Store.connected() ? 'conn-on' : 'conn-off') + '" id="conn-pill">' + (Store.connected() ? '🟢 متصل' : '🟠 Offline — البيانات محفوظة محلياً') + '</div>' +
+    '<button class="icon-btn" onclick="UI.open(alertsModal(),\'\')">🔔<span class="badge-count" id="bell-count" style="display:' + (Store.unread() ? 'grid' : 'none') + '">' + Store.unread() + '</span></button>' +
+    '<div class="user-chip" onclick="openProfile()">' + avatarOf(u.name, u.avatar, 36) +
+    '<div class="meta"><b>' + esc(u.name) + '</b><small>' + esc(roleName(Store.role)) + '</small></div></div>' +
+    '<button class="icon-btn" title="تبديل الدور" onclick="Router.go(\'login\')">🔄</button>' +
+    '</div></div>';
+}
+function roleName(r) {
+  const m = { admin: 'مدير وطني', hospital: 'مستشفى / طبيب', nurse: 'ممرض متنقل', dass: 'DASS', family: 'عائلة / مرافق', patient: 'مستفيد' };
+  return m[r] || r;
+}
+function shellSide() {
+  const items = Store.navItems().map(([n, ic, t]) =>
+    '<button class="nav-item" data-nav="' + n + '" onclick="Router.go(\'' + n + '\')"><span class="n-ico">' + ic + '</span>' + esc(t) + '</button>').join('');
+  return '<aside class="sidebar" id="sidebar">' +
+    '<div class="side-label">القائمة الرئيسية</div>' + items +
+    '<div class="side-card-promo"><b>VITALINK DZ</b><p>نبض الرعاية المتصل — منظومة متكاملة تجمع الصحة والرعاية والسياحة العلاجية.</p>' +
+    '<button class="btn btn-white btn-sm" onclick="Router.go(\'card\')">🪪 بطاقة المتابعة</button></div></aside>';
+}
+function shellBottom() {
+  const items = Store.navItems().map(([n, ic, t]) =>
+    '<div class="bn-item" data-nav="' + n + '" onclick="Router.go(\'' + n + '\')"><span class="bn-ico">' + ic + '</span>' + esc(t) + '</div>').join('');
+  return '<nav class="bottom-nav" id="bottom-nav"><div class="bottom-nav-inner">' + items + '</div></nav>';
+}
+function shellFrame(content) {
+  return shellTopbar() +
+    '<div class="shell">' + shellSide() + '<div class="main">' + content + '</div></div>' +
+    shellBottom() +
+    '<button class="sos-fab" id="sos-fab" onclick="openSOS()">🚨<br>SOS</button>';
+}
+function toast(msg, type) { UI.toast(msg, type); }
+
+/* ============ 11. نافذة SOS ============ */
+function openSOS() {
+  const ov = UI.open(
+    UI.head('حالة طوارئ', '🚨') +
+    '<div class="modal-body" style="text-align:center">' +
+    '<div style="font-size:64px">🚨</div>' +
+    '<h3 style="font-size:22px;margin:8px 0">' + (Store.user ? esc(Store.user.name) : 'المستفيد') + '</h3>' +
+    '<p class="muted">هل تريد إرسال طلب طوارئ؟ سيتم تحديد الموقع وتنبيه جهات الاتصال والفريق المسؤول.</p>' +
+    '</div>' +
+    '<div class="modal-foot" style="justify-content:space-between"><button class="btn btn-line" data-close>إلغاء</button>' +
+    '<button class="btn btn-danger" id="sos-send">إرسال الطوارئ</button></div>',
+    'modal-sm'
+  );
+  ov.querySelector('#sos-send').addEventListener('click', () => {
+    const who = Store.user ? Store.user.name : 'مستخدم';
+    DB.insert('alerts', { id: uid(), type: 'critical', icon: '🔴', title: 'تنبيه طوارئ SOS', message: who + ' أرسل تنبيهاً SOS من موقع (36.75, 3.05). تم إخطار جهات الاتصال والحماية المدنية.', patientId: Store.user && Store.user.role === 'patient' ? Store.user.id : null, at: new Date().toISOString(), read: false });
+    UI.close(ov);
+    toast('🚨 تم إرسال تنبيه الطوارئ إلى العائلة والفريق والحماية المدنية', 'warning');
+  });
+}
+
+/* ============ 12. مركز التنبيهات ============ */
+function alertsModal() {
+  const rows = DB.all('alerts').sort((a, b) => new Date(b.at) - new Date(a.at)).map(a =>
+    '<div class="alert-row"><div class="a-ico" style="background:' + (a.type === 'critical' ? 'var(--red-100)' : a.type === 'warning' ? 'var(--orange-100)' : a.type === 'reminder' ? '#F1F1F7' : 'var(--blue-100)') + '">' + a.icon + '</div>' +
+    '<div><b>' + esc(a.title) + '</b><p class="small muted">' + esc(a.message) + '</p><span class="small" style="color:var(--purple)">' + fmtDate(a.at) + '</span></div></div>'
+  ).join('') || UI.empty('🔕', 'لا توجد تنبيهات');
+  DB.all('alerts').forEach(a => { a.read = true; });
+  DB.save();
+  Router.shellSync();
+  return UI.head('مركز التنبيهات', '🔔') + '<div class="modal-body">' + rows + '</div>';
+}
+
+/* ============ 13. الملف الشخصي ============ */
+function openProfile() {
+  const u = Store.user;
+  const trips = u.role === 'patient' ? (Store.tripOf(u.id) ? [Store.tripOf(u.id)] : []) : DB.all('trips');
+  UI.open(
+    UI.head('الملف الشخصي', '👤') +
+    '<div class="modal-body">' +
+    '<div class="flex items-center gap-14 mb-16">' + avatarOf(u.name, u.avatar, 64) +
+    '<div><b style="font-size:18px">' + esc(u.name) + '</b><div class="small muted">' + esc(roleName(Store.role)) + '</div>' +
+    (u.specialty ? '<span class="chip mt-8">' + esc(u.specialty) + '</span>' : '') + '</div></div>' +
+    '<div class="kv"><span>الهاتف</span><b>☎ ' + esc(u.phone || '—') + '</b></div>' +
+    '<div class="kv"><span>البريد</span><b>' + esc(u.email || '—') + '</b></div>' +
+    '<div class="kv"><span>المؤسسة</span><b>' + esc(u.facility || '—') + '</b></div>' +
+    (u.role === 'patient' ? '<div class="kv"><span>الرقم الموحد</span><b>' + esc(u.uid) + '</b></div><div class="kv"><span>فصيلة الدم</span><b>' + esc(u.bloodType || '—') + '</b></div>' : '') +
+    '<div class="kv"><span>مشروع</span><b>VITALINK DZ — ' + esc(APP.researcher) + '</b></div>' +
+    '</div>' +
+    '<div class="modal-foot"><button class="btn btn-danger" onclick="Store.logout()">تسجيل الخروج</button>' +
+    '<button class="btn btn-line" data-close>إغلاق</button></div>'
+  );
+}
+
+/* ============ 14. الصفحة الرئيسية ============ */
+Router.register('home', {
+  roles: null,
+  async render() {
+    return '<div class="landing"><div class="container">' +
+      '<nav class="land-nav"><div class="brand"><div class="brand-logo">⚕️</div>' +
+      '<div class="brand-text"><b>VITAL<span>DZ</span></b><small>' + esc(APP.tag) + '</small></div></div>' +
+      '<div style="flex:1"></div>' +
+      '<div class="conn-pill conn-on">🟢 متصل</div>' +
+      '<button class="btn btn-primary" onclick="Router.go(\'login\')">دخول المنصة</button></nav>' +
+      '<div class="land-hero">' +
+      '<span class="pill-tag">🇩🇿 منظومة وطنية موحدة — مؤسسة ناشئة</span>' +
+      '<h1>VITALINK <span>DZ</span></h1>' +
+      '<div class="tagline">"نبض الرعاية المتصل"</div>' +
+      '<p>' + esc(APP.app) + ' — ' + esc(APP.appTag) + '. منصة تربط المستفيد بمنظومته الصحية والاجتماعية والسياحية في نظام واحد متكامل، يرافقه في حياته اليومية.</p>' +
+      '<div class="cta"><button class="btn btn-lg btn-primary" onclick="Router.go(\'login\')">ابدأ الآن ←</button>' +
+      '<button class="btn btn-lg btn-white" onclick="UI.toast(\'النسخة التجريبية تعمل دون خادم\')">🎬 شاهد العرض</button></div></div>' +
+      '<div class="land-features">' +
+      feat('❤️', 'الرعاية الصحية', 'ملف صحي رقمي موحد، مؤشرات حيوية، بروتوكولات علاجية، وتنبيهات ذكية.') +
+      feat('🏠', 'المتابعة المنزلية', 'زيارات ممرضين متنقلين وتسجيل قياسات حتى دون اتصال.') +
+      feat('🚨', 'الطوارئ المتصلة', 'زر SOS ثابت، تحديد موقع، وتنبيه العائلة والفريق الطبي.') +
+      feat('♨️', 'السياحة العلاجية', 'برامج Travel + Care تربط الملف الصحي بالمسار السياحي العلاجي.') +
+      '</div></div></div>';
+  },
+});
+function feat(ic, t, d) {
+  return '<div class="lf-card"><div class="lf-ico" style="background:var(--purple-100)">' + ic + '</div><b>' + t + '</b><p>' + d + '</p></div>';
+}
+
+/* ============ 15. الدخول ============ */
+Router.register('login', {
+  roles: null,
+  async render() {
+    const roles = [
+      ['admin', '🛡️', 'مدير وطني', 'الإحصائيات الوطنية وإدارة النظام'],
+      ['hospital', '🩺', 'مستشفى / طبيب', 'الملفات الصحية والبروتوكولات'],
+      ['nurse', '💉', 'ممرض متنقل', 'الزيارات والقياسات Offline'],
+      ['dass', '🏛️', 'DASS', 'المتابعة الاجتماعية والمساعدة'],
+      ['family', '👨‍👩‍👧', 'عائلة / مرافق', 'متابعة المستفيدين والتنبيهات'],
+      ['patient', '📱', 'مستفيد', 'تطبيق VITAL DZ المبسط'],
+    ].map(([r, ic, t, d]) =>
+      '<div class="role-card" data-role="' + r + '"><div class="r-ico">' + ic + '</div><b>' + t + '</b><small>' + d + '</small>' +
+      '<span class="go">دخول ←</span></div>').join('');
+    return '<div class="login-screen"><div class="login-box">' +
+      '<div class="login-head"><div class="brand-logo">⚕️</div><h1>VITALINK <span style="color:var(--purple)">DZ</span></h1>' +
+      '<p>' + esc(APP.tag) + ' — اختر نوع المستخدم للدخول إلى النسخة التجريبية</p></div>' +
+      '<div class="card" style="box-shadow:var(--shadow)"><div class="role-cards">' + roles + '</div>' +
+      '<div style="margin-top:18px;padding:14px;border-radius:14px;background:var(--purple-050);font-size:13px;color:var(--ink-2)">' +
+      '🎓 مشروع مؤسسة ناشئة لنيل شهادة الماستر — ' + esc(APP.researcher) + '<br><small class="muted">' + esc(APP.college) + ' • ' + esc(APP.major) + ' • ' + esc(APP.year) + ' — ' + esc(APP.email) + '</small></div></div>' +
+      '</div></div>';
+  },
+  bind(el) {
+    el.querySelectorAll('[data-role]').forEach((b) => b.addEventListener('click', () => Store.login(b.dataset.role)));
+  },
+});
+
+/* ============ 16. لوحة التحكم (مدير) ============ */
+function statsData() {
+  const pts = DB.all('patients');
+  const vitToday = DB.all('vitals').filter(v => new Date(v.at).toDateString() === new Date().toDateString()).length;
+  return {
+    total: pts.length,
+    stable: pts.filter(p => p.index === 'green').length,
+    follow: pts.filter(p => p.index === 'orange').length,
+    danger: pts.filter(p => p.index === 'red').length,
+    visitsToday: vitToday,
+    protocols: DB.all('protocols').filter(p => p.status === 'active').length,
+    tourism: DB.all('trips').length,
+    wilayas: 58,
+  };
+}
+Router.register('dashboard', {
+  roles: ['admin'],
+  async render() {
+    const s = statsData();
+    const cards = [
+      ['👥', s.total, 'إجمالي المستفيدين', 'bg-purple-soft'],
+      ['🧑‍🤝‍🧑', s.stable, 'حالات مستقرة', 'bg-green-soft'],
+      ['📈', s.follow, 'تحتاج متابعة', 'bg-orange-soft'],
+      ['🚨', s.danger, 'حالات حرجة', 'bg-red-soft'],
+      ['🏠', s.visitsToday, 'زيارات اليوم', 'bg-blue-soft'],
+      ['📋', s.protocols, 'بروتوكولات نشطة', 'bg-purple-soft'],
+      ['🧳', s.tourism, 'في رحلة علاجية', 'bg-blue-soft'],
+      ['🌍', s.wilayas, 'ولاية مغطاة', 'bg-green-soft'],
+    ].map(([ic, n, l, bg]) =>
+      '<div class="card stat-card"><div class="s-ico ' + bg + '">' + ic + '</div><div><div class="s-num">' + n + '</div><div class="s-lab">' + l + '</div></div></div>').join('');
+    const healthBar = patientHealthBars();
+    const latest = DB.all('alerts').slice(0, 4).map(a =>
+      '<div class="alert-row"><div class="a-ico" style="background:var(--purple-050)">' + a.icon + '</div><div><b>' + esc(a.title) + '</b><p class="small muted">' + esc(a.message) + '</p></div></div>').join('');
+    return shellFrame(
+      '<div class="section-head"><h2>لوحة التحكم الوطنية</h2><span class="badge badge-purple">🟢 جميع الأنظمة تعمل</span></div>' +
+      '<div class="grid grid-4 mb-24">' + cards + '</div>' +
+      '<div class="grid grid-2 mb-24">' +
+      '<div class="card"><div class="card-title"><span class="ico">📈</span> توزيع المؤشر الصحي</div>' + healthBar + '</div>' +
+      '<div class="card"><div class="card-title"><span class="ico">🔔</span> آخر التنبيهات</div>' + latest + '</div></div>' +
+      '<div class="card"><div class="card-title"><span class="ico">🧾</span> جدول متابعة المستفيدين</div>' + patientTable() + '</div>'
+    );
+  },
+  bind(el) { bindPatientTable(el); bindGlobal(el); },
+});
+
+function patientHealthBars() {
+  const s = statsData();
+  const total = s.total || 1;
+  const seg = (n, cls, lab) => '<div style="flex:1;background:' + cls + ';height:14px;border-radius:999px" title="' + lab + '"></div>';
+  return '<div style="display:flex;gap:4px;margin-bottom:14px">' +
+    '<div style="flex:' + (s.stable / total * 100).toFixed(2) + ';background:var(--green);height:14px;border-radius:999px"></div>' +
+    '<div style="flex:' + (s.follow / total * 100).toFixed(2) + ';background:var(--orange);height:14px;border-radius:999px"></div>' +
+    '<div style="flex:' + (s.danger / total * 100).toFixed(2) + ';background:var(--red);height:14px;border-radius:999px"></div></div>' +
+    '<div class="flex gap-16 flex-wrap small">' +
+    '<span><span class="dot dot-green"></span> مستقر ' + s.stable + '</span>' +
+    '<span><span class="dot dot-orange"></span> يحتاج متابعة ' + s.follow + '</span>' +
+    '<span><span class="dot dot-red"></span> خطر ' + s.danger + '</span></div>';
+}
+
+function patientRow(p) {
+  const t = Store.tripOf(p.id);
+  return '<tr data-pid="' + p.id + '">' +
+    '<td><span class="chip chip-line">' + esc(p.uid) + '</span></td>' +
+    '<td><div class="pat-cell">' + avatarOf(p.name, p.avatar, 38) + '<div><b>' + esc(p.name) + '</b><small class="muted">' + esc(p.fileNo) + '</small></div></div></td>' +
+    '<td>' + ageOf(p.birth) + '</td>' +
+    '<td>' + UI.catBadge(p.category) + '</td>' +
+    '<td>' + (t ? '<span class="chip chip-green">🛰️ متزامن</span>' : Store.connected() ? '<span class="chip chip-green">🛰️ متزامن</span>' : '<span class="chip chip-orange">🟠 Offline</span>') + '</td>' +
+    '<td>' + UI.statusBadge(p.index) + '</td>' +
+    '<td class="small muted">' + fmtDate(p.lastVisit) + '</td>' +
+    '<td>' + (p.protocolId ? '<span class="chip chip-purple">نشط</span>' : '<span class="chip">—</span>') + '</td>' +
+    '<td><button class="btn btn-soft btn-sm" data-open-file="' + p.id + '">فتح</button></td>' +
+    '</tr>';
+}
+function patientTable() {
+  const rows = DB.all('patients').map(patientRow).join('');
+  return '<div class="table-wrap"><table class="tbl">' +
+    '<thead><tr><th>UID</th><th>الاسم واللقب</th><th>العمر</th><th>نوع الحالة</th><th>المزامنة</th><th>المؤشر</th><th>آخر زيارة</th><th>البروتوكول</th><th>الإجراء</th></tr></thead>' +
+    '<tbody>' + rows + '</tbody></table></div>';
+}
+function bindPatientTable(el) {
+  el.querySelectorAll('[data-open-file]').forEach((b) => b.addEventListener('click', (e) => {
+    e.stopPropagation();
+    Store.selectedId = b.dataset.openFile;
+    Router.go('patients');
+    Router.paint(Router.views['patients']);
+  }));
+  el.querySelectorAll('tr[data-pid]').forEach((tr) => tr.addEventListener('click', () => {
+    Store.selectedId = tr.dataset.pid;
+    Router.paint(Router.views['patients']);
+  }));
+}
+function bindGlobal(el) {
+  el.querySelectorAll('[data-nav]').forEach(() => {});
+  const inp = document.getElementById('search-inp');
+  if (inp) inp.addEventListener('input', () => renderSearchResults(null, inp.value));
+  document.addEventListener('click', (e) => {
+    const hr = document.getElementById('search-results');
+    if (hr && !e.target.closest('.search-box')) hr.classList.remove('open');
+  });
+}
+
+/* ============ 17. المستفيدون + البطاقة الجانبية الذكية ============ */
+Router.register('patients', {
+  roles: ['admin', 'hospital', 'nurse', 'dass'],
+  async render() {
+    const side = Store.selectedId ? smartCard(Store.patient(Store.selectedId)) : smartCard(null);
+    return shellFrame(
+      '<div class="section-head"><h2>مستفيدو المنصة</h2>' +
+      '<div class="flex gap-8"><input class="form-control" id="pat-filter" placeholder="تصفية..." style="max-width:220px">' +
+      '<button class="btn btn-soft" onclick="UI.toast(\'تم تصدير القائمة\')">⬇ تصدير</button></div></div>' +
+      '<div class="grid-main"><div class="card" style="overflow:hidden"><div class="table-wrap">' + patientTable() + '</div></div>' +
+      '<div class="side-panel">' + side + '</div></div>'
+    );
+  },
+  bind(el) {
+    bindPatientTable(el);
+    bindGlobal(el);
+    const f = el.querySelector('#pat-filter');
+    if (f) f.addEventListener('input', () => {
+      const q = f.value.toLowerCase();
+      el.querySelectorAll('tr[data-pid]').forEach((tr) => {
+        tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
+      });
+    });
+  },
+});
+
+function smartCard(p) {
+  if (!p) return '<div class="card"><div class="card-title"><span class="ico">🪪</span> البطاقة الجانبية الذكية</div>' +
+    '<p class="small muted">اختر مستفيداً من الجدول لعرض ملفه الكامل هنا: الحالة، الأمراض، الأدوية، آخر المؤشرات، الطبيب، الممرض والمرافق.</p></div>';
+  const doc = Store.personName(p.doctorId);
+  const nurse = Store.personName(p.nurseId);
+  const fam = p.companionId ? Store.personName(p.companionId) : (p.familyId ? Store.personName(p.familyId) : '—');
+  const v = Store.vitalsOf(p.id);
+  const last = v.length ? v[v.length - 1] : null;
+  const trip = Store.tripOf(p.id);
+  const isFamily = Store.role === 'family';
+  const isCompanion = !!p.companionId;
+
+  let vitalsBlock = '';
+  if (last) {
+    vitalsBlock =
+      '<div class="mt-12"><div class="small muted mb-8">آخر المؤشرات — ' + fmtDate(last.at) + '</div>' +
+      '<div class="vit-grid" style="grid-template-columns:repeat(2,1fr)">' +
+      vitTile('ضغط الدم', last.bpSys + '/' + last.bpDia, 'mmHg', last.bpSys > 140 ? 'warn' : '') +
+      vitTile('السكر', last.glucose, 'g/L', last.glucose > 1.6 ? 'warn' : '') +
+      vitTile('SpO2', last.spo2, '%', last.spo2 < 92 ? 'crit' : '') +
+      vitTile('الحرارة', last.temp, '°C', '') +
+      '</div></div>';
+  }
+  return '<div class="smart-card">' +
+    '<div class="sc-head" style="background:linear-gradient(150deg,var(--purple-050),#fff)">' +
+    avatarOf(p.name, p.avatar, 86) + '<b>' + esc(p.name) + '</b><div class="uid">' + esc(p.uid) + ' • ' + esc(p.fileNo) + '</div>' +
+    '<div class="mt-8">' + UI.statusBadge(p.index) + ' ' + UI.catBadge(p.category) + '</div></div>' +
+    '<div class="sc-body">' +
+    '<div class="kv"><span>العمر / الجنس</span><b>' + ageOf(p.birth) + ' سنة — ' + esc(p.gender) + '</b></div>' +
+    '<div class="kv"><span>العنوان</span><b>' + esc(p.address || '—') + '</b></div>' +
+    '<div class="kv"><span>فصيلة الدم</span><b>' + esc(p.bloodType || '—') + '</b></div>' +
+    (p.guardian ? '<div class="kv"><span>الولي الشرعي</span><b>' + esc(p.guardian.name) + ' (' + esc(p.guardian.relation) + ') — ' + esc(p.guardian.phone) + '</b></div>' : '') +
+    (p.disability ? '<div class="kv"><span>الإعاقة</span><b>' + esc(p.disability.type) + ' — ' + p.disability.percent + '%</b></div><div class="kv"><span>الأجهزة المساعدة</span><b>' + esc(p.disability.devices.join('، ')) + '</b></div>' : '') +
+    '<div class="kv"><span>الأمراض المزمنة</span><b>' + esc((p.chronic || []).join('، ') || '—') + '</b></div>' +
+    '<div class="kv"><span>الحساسية</span><b class="' + (p.allergies.length ? 'chip-red' : '') + '">' + esc((p.allergies || []).join('، ') || 'لا توجد') + '</b></div>' +
+    '<div class="mt-12"><b class="small muted">الأدوية الأساسية</b><div class="list-chips mt-8">' +
+    (p.medications || []).map(m => '<span class="chip">💊 ' + esc(m.name) + '</span>').join('') + '</div></div>' +
+    vitalsBlock +
+    '<div class="mt-12"><div class="small muted mb-8">الفريق والمتابعة</div>' +
+    '<div class="kv"><span>الطبيب</span><b>🩺 ' + esc(doc) + '</b></div>' +
+    '<div class="kv"><span>الممرض</span><b>💉 ' + esc(nurse) + '</b></div>' +
+    (isCompanion || isFamily ? '<div class="kv" style="background:var(--green-100);border-radius:12px;padding:10px"><span>المرافق</span><b>👨‍👩‍👧 ' + esc(fam) + '</b></div>' : '') +
+    (trip ? '<div class="kv"><span>البرنامج السياحي</span><b>🧳 ' + esc(trip.number) + ' — ' + esc(trip.hotel) + '</b></div>' : '') +
+    '<div class="kv"><span>البروتوكول</span><b>' + (p.protocolId ? '<span class="chip chip-green">نشط</span>' : '<span class="chip chip-line">لا يوجد</span>') + '</b></div></div>' +
+    '<div class="mt-16 flex gap-8 flex-wrap">' +
+    '<button class="btn btn-soft btn-sm" onclick="openFile(' + "'" + p.id + "'" + ')">📂 فتح الملف</button>' +
+    (p.protocolId ? '<button class="btn btn-line btn-sm" onclick="openProtocol(' + "'" + p.protocolId + "'" + ')">📋 البروتوكول</button>' : '') +
+    UI.contactBtns(p.phone, '<button class="btn btn-line btn-sm" onclick="openSOS()">🚨</button>') +
+    '</div>' +
+    '</div></div>';
+}
+function vitTile(lab, val, unit, cls) {
+  return '<div class="vit-tile ' + cls + '"><div class="v-num">' + esc(val) + ' <small>' + unit + '</small></div><div class="v-lab">' + lab + '</div></div>';
+}
+
+/* ============ 18. الملف الصحي الموحد ============ */
+function openFile(pid) {
+  const p = Store.patient(pid);
+  if (!p) return;
+  const v = Store.vitalsOf(pid);
+  const glucose = v.map(x => x.glucose).slice(-10);
+  const bp = v.map(x => x.bpSys).slice(-10);
+  const timeline = v.slice(-6).reverse().map(x =>
+    '<div class="tl-item"><b>' + fmtDate(x.at) + '</b>' +
+    '<span class="small">ض ' + x.bpSys + '/' + x.bpDia + ' — سكر ' + x.glucose + ' — SpO2 ' + x.spo2 + '% — الحرارة ' + x.temp + '°</span>' +
+    '<div class="small muted">بواسطة: ' + esc(x.by) + ' (مصدر: ' + esc(x.source) + ')' + (x.note ? ' — ملاحظة: ' + esc(x.note) : '') + '</div></div>').join('');
+  const meds = (p.medications || []).map(m => '<span class="chip">💊 ' + esc(m.name) + ' — ' + esc(m.dose) + '</span>').join('');
+  const vacs = (p.vaccinations || []).map(x => '<span class="chip chip-green">💉 ' + esc(x) + '</span>').join('');
+  const contact = (p.guardian || {}).phone || p.phone;
+  const relPhone = (p.guardian || {}).phone || (Store.userById(p.familyId) || {}).phone || p.phone;
+  UI.open(
+    UI.head('الملف الصحي الموحد — ' + p.name, '📂') +
+    '<div class="modal-body">' +
+    '<div class="flex items-center gap-14 mb-16">' + avatarOf(p.name, p.avatar, 60) +
+    '<div><b style="font-size:18px">' + esc(p.name) + '</b><div class="small muted">' + esc(p.uid) + ' • ' + esc(p.fileNo) + '</div>' +
+    '<div class="mt-8">' + UI.statusBadge(p.index) + UI.catBadge(p.category) + '</div></div></div>' +
+    '<div class="grid grid-2 gap-12 mb-16">' +
+    '<div><b class="small muted">الأمراض المزمنة</b><div class="list-chips mt-8">' + (p.chronic || []).map(x => '<span class="chip chip-orange">' + esc(x) + '</span>').join('') + '</div></div>' +
+    '<div><b class="small muted">الحساسية</b><div class="list-chips mt-8">' + (p.allergies || []).map(x => '<span class="chip chip-red">' + esc(x) + '</span>').join('') + '</div></div></div>' +
+    '<div class="mb-16"><b class="small muted">الأدوية والجرعات</b><div class="list-chips mt-8">' + (meds || '—') + '</div></div>' +
+    (vacs ? '<div class="mb-16"><b class="small muted">التلقيحات</b><div class="list-chips mt-8">' + vacs + '</div></div>' : '') +
+    '<div class="card" style="background:var(--purple-050)"><div class="card-title" style="font-size:14px"><span class="ico">📈</span> منحنى السكر (آخر القياسات)</div>' + UI.sparkline(glucose, 600, 90) + '</div>' +
+    '<div class="card mt-16" style="background:var(--purple-050)"><div class="card-title" style="font-size:14px"><span class="ico">📈</span> الضغط الانقباضي</div>' + UI.sparkline(bp, 600, 90) + '</div>' +
+    '<div class="mt-16"><b class="small muted">الخط الزمني للقياسات</b><div class="timeline mt-8">' + timeline + '</div></div>' +
+    '<div class="mt-16 card" style="background:var(--green-100)"><div class="small"><b>👨‍👩‍👧 جهة الاتصال: ' + esc((p.guardian || {}).name || Store.personName(p.familyId) || '—') + '</b></div>' + UI.contactBtns(relPhone) + '</div>' +
+    '</div>' +
+    '<div class="modal-foot"><button class="btn btn-line" onclick="openPrint(\'' + p.id + '\')">🖨 طباعة بطاقة المتابعة</button>' +
+    '<button class="btn btn-primary" data-close>إغلاق</button></div>',
+    'modal-lg'
+  );
+}
+
+/* ============ 19. البروتوكول العلاجي ============ */
+function openProtocol(prid) {
+  const pr = DB.find('protocols', x => x.id === prid);
+  if (!pr) return;
+  const p = Store.patient(pr.patientId);
+  const log = (pr.log || []).map(l => '<div class="tl-item"><b>' + esc(l.action) + '</b><span class="small muted">' + fmtDate(l.at) + ' — ' + esc(l.by) + '</span></div>').join('');
+  const ov = UI.open(
+    UI.head('البروتوكول الصحي — ' + (p ? p.name : ''), '📋') +
+    '<div class="modal-body">' +
+    '<div class="flex items-center justify-between flex-wrap gap-8 mb-16">' +
+    '<div><b style="font-size:18px">' + esc(pr.name) + '</b><div class="small muted">' + esc(pr.type) + ' — الطبيب: ' + esc(pr.doctor) + '</div></div>' +
+    '<span class="badge badge-green"><span class="dot dot-green"></span> نشط</span></div>' +
+    '<div class="grid grid-2 gap-12 mb-16">' +
+    '<div class="kv"><span>تاريخ البداية</span><b>' + fmtDay(pr.start) + '</b></div>' +
+    '<div class="kv"><span>تاريخ المراجعة</span><b>' + fmtDay(pr.review) + '</b></div></div>' +
+    '<div class="mb-16"><b class="small muted">الأدوية والجرعات</b><div class="list-chips mt-8">' + pr.meds.map(x => '<span class="chip">💊 ' + esc(x) + '</span>').join('') + '</div></div>' +
+    '<div class="mb-16"><b class="small muted">المواعيد</b><div class="list-chips mt-8">' + pr.appointments.map(x => '<span class="chip chip-blue">📅 ' + esc(x) + '</span>').join('') + '</div></div>' +
+    '<div class="mb-16"><b class="small muted">القياسات والتحاليل المطلوبة</b><div class="list-chips mt-8">' +
+    pr.required.map(x => '<span class="chip chip-orange">📐 ' + esc(x) + '</span>').concat(pr.tests.map(x => '<span class="chip chip-purple">🧪 ' + esc(x) + '</span>')).join('') + '</div></div>' +
+    '<div class="card" style="background:var(--purple-050)"><b class="small muted">التعليمات</b><p class="small mt-8">' + esc(pr.instructions) + '</p></div>' +
+    '<div class="mt-16"><b class="small muted">سجل التعديلات</b><div class="timeline mt-8">' + log + '</div></div>' +
+    '</div>' +
+    '<div class="modal-foot">' +
+    '<button class="btn btn-ghost" id="pr-archive">📦 أرشفة</button>' +
+    '<button class="btn btn-ghost" id="pr-stop">⏹ إيقاف</button>' +
+    '<button class="btn btn-soft" id="pr-edit">✏️ تعديل</button>' +
+    '<button class="btn btn-primary" data-close>إغلاق</button></div>'
+  );
+  const addLog = (action) => { pr.log.push({ at: new Date().toISOString(), by: Store.user ? Store.user.name : 'نظام', action }); DB.save(); toast('تم تسجيل العملية', 'success'); };
+  ov.querySelector('#pr-edit').addEventListener('click', () => { addLog('تعديل البروتوكول'); UI.toast('وضع التعديل — النسخة التجريبية', 'success'); });
+  ov.querySelector('#pr-stop').addEventListener('click', () => { pr.status = 'stopped'; addLog('إيقاف البروتوكول'); });
+  ov.querySelector('#pr-archive').addEventListener('click', () => { pr.status = 'archived'; addLog('أرشفة البروتوكول'); });
+}
+
+/* ============ 20. بوابة المستشفى / الطبيب ============ */
+Router.register('doctor', {
+  roles: ['hospital'],
+  async render() {
+    const mine = DB.all('patients');
+    const cards = mine.map(p =>
+      '<div class="card" style="cursor:pointer" onclick="openFile(\'' + p.id + '\')">' +
+      '<div class="flex items-center gap-12 mb-12">' + avatarOf(p.name, p.avatar, 48) +
+      '<div><b>' + esc(p.name) + '</b><div class="small muted">' + esc(p.uid) + '</div></div>' +
+      '<div style="flex:1"></div>' + UI.statusBadge(p.index) + '</div>' +
+      '<div class="flex gap-8 flex-wrap">' + UI.catBadge(p.category) +
+      (p.protocolId ? '<span class="chip chip-green">📋 بروتوكول نشط</span>' : '<span class="chip">لا بروتوكول</span>') + '</div>' +
+      '<div class="mt-12 flex gap-8">' +
+      '<button class="btn btn-soft btn-sm" onclick="event.stopPropagation();openProtocol(\'' + (p.protocolId || '') + '\')">📋 البروتوكول</button>' +
+      '<button class="btn btn-line btn-sm" onclick="event.stopPropagation();suggestTourism(\'' + p.id + '\')">🧳 مسار سياحي</button>' +
+      '</div></div>').join('');
+    return shellFrame(
+      '<div class="section-head"><h2>بوابة المستشفى — eCare</h2>' +
+      '<button class="btn btn-primary" onclick="newReferral()">➕ إحالة جديدة</button></div>' +
+      '<div class="card mb-16"><div class="card-title"><span class="ico">🩺</span> المرضى المتابعون</div>' +
+      '<div class="grid grid-3">' + cards + '</div></div>' +
+      '<div class="card"><div class="card-title"><span class="ico">📋</span> البروتوكولات النشطة</div>' +
+      protocolTable() + '</div>'
+    );
+  },
+  bind(el) { bindGlobal(el); bindProtocolTable(el); },
+});
+function protocolTable() {
+  const rows = DB.all('protocols').filter(x => x.status === 'active').map(pr => {
+    const p = Store.patient(pr.patientId);
+    return '<tr><td><b>' + esc(pr.name) + '</b></td><td>' + esc(p ? p.name : '—') + '</td><td>' + esc(pr.type) + '</td><td>' + esc(pr.doctor) + '</td>' +
+      '<td><span class="badge badge-green">نشط</span></td>' +
+      '<td><button class="btn btn-soft btn-sm" onclick="openProtocol(\'' + pr.id + '\')">عرض</button></td></tr>';
+  }).join('');
+  return '<div class="table-wrap"><table class="tbl"><thead><tr><th>البروتوكول</th><th>المستفيد</th><th>النوع</th><th>الطبيب</th><th>الحالة</th><th></th></tr></thead><tbody>' + rows + '</tbody></table></div>';
+}
+function bindProtocolTable(el) {
+  el.querySelectorAll('[data-open-file]').forEach((b) => b.addEventListener('click', (e) => { e.stopPropagation(); openFile(b.dataset.openFile); }));
+}
+function newReferral() {
+  const opts = DB.all('patients').map(p => '<option value="' + p.id + '">' + esc(p.name) + '</option>').join('');
+  const ov = UI.open(
+    UI.head('إحالة جديدة', '📨') +
+    '<div class="modal-body">' +
+    '<div class="form-group"><label>المستفيد</label><select class="form-control" id="rf-pat">' + opts + '</select></div>' +
+    '<div class="form-group"><label>الوجهة</label><select class="form-control" id="rf-to"><option>DASS</option><option>السياحة العلاجية</option><option>مصحة مختصة</option></select></div>' +
+    '<div class="form-group"><label>التفاصيل</label><textarea class="form-control" id="rf-details" placeholder="وصف الحالة والسبب..."></textarea></div>' +
+    '</div>' +
+    '<div class="modal-foot"><button class="btn btn-primary" id="rf-go">إرسال الإحالة</button></div>'
+  );
+  ov.querySelector('#rf-go').addEventListener('click', () => {
+    UI.close(ov);
+    toast('📨 تم إرسال الإحالة ' + (ov.querySelector('#rf-to').value), 'success');
+  });
+}
+function suggestTourism(pid) {
+  const p = Store.patient(pid);
+  const pkgs = DB.all('packages').map(x =>
+    '<div class="card" style="padding:16px;display:flex;align-items:center;gap:14px;margin-bottom:10px">' +
+    '<div style="font-size:30px">' + x.icon + '</div><div style="flex:1"><b>' + esc(x.name) + '</b>' +
+    '<div class="small muted">' + esc(x.destination) + ' — ' + x.duration + ' — ' + x.price.toLocaleString() + ' دج</div></div>' +
+    '<button class="btn btn-soft btn-sm" onclick="addToTrip(\'' + p.id + '\',\'' + x.id + '\')">➕ إضافة</button></div>').join('');
+  UI.open(
+    UI.head('اقتراح مسار علاجي سياحي — ' + (p ? p.name : ''), '🧳') +
+    '<div class="modal-body">' +
+    '<p class="small muted mb-16">اختر البرنامج المناسب لحالة المستفيد الصحية وسيتم إنشاء ملف الرحلة وربط الجهات المشاركة.</p>' + pkgs + '</div>'
+  );
+}
+
+/* ============ 21. بوابة الممرض المتنقل (Offline) ============ */
+Router.register('nurse', {
+  roles: ['nurse'],
+  async render() {
+    const today = DB.all('vitals').filter(v => new Date(v.at).toDateString() === new Date().toDateString());
+    const pend = DB.all('patients').filter(p => p.status === 'follow' || p.status === 'danger');
+    return shellFrame(
+      '<div class="section-head"><h2>بوابة الممرض المتنقل</h2>' +
+      '<div class="flex gap-8"><span class="conn-pill ' + (Store.connected() ? 'conn-on' : 'conn-off') + '" id="nurse-conn">' +
+      (Store.connected() ? '🟢 متصل' : '🟠 Offline — البيانات محفوظة محلياً') + '</span>' +
+      '<button class="btn ' + (Store.offline ? 'btn-primary' : 'btn-line') + '" id="nurse-toggle">' + (Store.offline ? '🔓 المزامنة' : '📴 وضع Offline') + '</button></div></div>' +
+      '<div class="grid grid-3 mb-24">' +
+      '<div class="card stat-card"><div class="s-ico bg-purple-soft">📅</div><div><div class="s-num">' + today.length + '</div><div class="s-lab">قياسات اليوم</div></div></div>' +
+      '<div class="card stat-card"><div class="s-ico bg-orange-soft">📍</div><div><div class="s-num">' + pend.length + '</div><div class="s-lab">حالات تحتاج زيارة</div></div></div>' +
+      '<div class="card stat-card"><div class="s-ico bg-blue-soft">🛰️</div><div><div class="s-num">' + DB.all('vitals').filter(v => !v.synced).length + '</div><div class="s-lab">غير مزامنة</div></div></div></div>' +
+      '<div class="grid grid-2">' +
+      '<div class="card"><div class="card-title"><span class="ico">💉</span> تسجيل زيارة وقياسات</div>' +
+      '<div class="form-group"><label>المستفيد</label><select class="form-control" id="nv-pat">' +
+      DB.all('patients').map(p => '<option value="' + p.id + '">' + esc(p.name) + '</option>').join('') + '</select></div>' +
+      '<div class="form-row">' +
+      '<div class="form-group"><label>ضغط الدم</label><div class="flex gap-8"><input class="form-control" id="nv-sys" placeholder="120"><input class="form-control" id="nv-dia" placeholder="80"></div></div>' +
+      '<div class="form-group"><label>السكر g/L</label><input class="form-control" id="nv-glu" placeholder="1.20"></div></div>' +
+      '<div class="form-row">' +
+      '<div class="form-group"><label>النبض</label><input class="form-control" id="nv-pulse" placeholder="75"></div>' +
+      '<div class="form-group"><label>SpO2 %</label><input class="form-control" id="nv-spo2" placeholder="97"></div></div>' +
+      '<div class="form-row">' +
+      '<div class="form-group"><label>الحرارة °C</label><input class="form-control" id="nv-temp" placeholder="36.6"></div>' +
+      '<div class="form-group"><label>الوزن kg</label><input class="form-control" id="nv-weight" placeholder="70"></div></div>' +
+      '<div class="form-group"><label>ملاحظات</label><textarea class="form-control" id="nv-note" placeholder="ملاحظات الزيارة..."></textarea></div>' +
+      '<button class="btn btn-primary btn-block" id="nv-save">💾 حفظ الزيارة</button>' +
+      (Store.offline ? '<p class="small muted mt-8">📴 سيتم حفظ البيانات محلياً والمزامنة عند عودة الإنترنت.</p>' : '') +
+      '</div>' +
+      '<div class="card"><div class="card-title"><span class="ico">📍</span> الزيارات الأخيرة</div>' +
+      recentVisits() + '</div></div>'
+    );
+  },
+  bind(el) {
+    bindGlobal(el);
+    const tg = el.querySelector('#nurse-toggle');
+    if (tg) tg.addEventListener('click', () => {
+      Store.offline = !Store.offline;
+      if (!Store.offline) syncNow();
+      else toast('📴 وضع دون اتصال — البيانات تُحفظ محلياً', 'warning');
+      Router.paint(Router.views['nurse']);
+    });
+    const sv = el.querySelector('#nv-save');
+    if (sv) sv.addEventListener('click', () => {
+      const pid = el.querySelector('#nv-pat').value;
+      const p = Store.patient(pid);
+      const v = {
+        id: uid(), patientId: pid,
+        bpSys: parseInt(el.querySelector('#nv-sys').value, 10) || 0,
+        bpDia: parseInt(el.querySelector('#nv-dia').value, 10) || 0,
+        glucose: parseFloat(el.querySelector('#nv-glu').value) || 0,
+        pulse: parseInt(el.querySelector('#nv-pulse').value, 10) || 0,
+        spo2: parseInt(el.querySelector('#nv-spo2').value, 10) || 0,
+        temp: parseFloat(el.querySelector('#nv-temp').value) || 0,
+        weight: parseFloat(el.querySelector('#nv-weight').value) || 0,
+        source: 'ممرض متنقل', by: Store.user.name, note: el.querySelector('#nv-note').value,
+        at: new Date().toISOString(), synced: !Store.offline,
+      };
+      DB.insert('vitals', v);
+      const glucose = v.glucose || 0;
+      let idx = 'green';
+      if (v.bpSys >= 160 || glucose >= 1.8 || v.spo2 <= 92) idx = 'red';
+      else if (v.bpSys >= 140 || glucose >= 1.4 || v.spo2 <= 95) idx = 'orange';
+      p.index = idx; p.lastVisit = v.at;
+      if (idx === 'red') {
+        DB.insert('alerts', { id: uid(), type: 'critical', icon: '🔴', title: 'تغير مهم في مؤشر صحي', message: 'سجل ' + p.name + ' قياسات حرجة (ضغط ' + v.bpSys + '/' + v.bpDia + '، سكر ' + v.glucose + '، SpO2 ' + v.spo2 + '%).', patientId: pid, at: v.at, read: false });
+      }
+      DB.save();
+      toast(idx === 'red' ? '🚨 قياسات حرجة — تم إخطار الطبيب والعائلة' : (Store.offline ? '💾 حفظت محلياً — ستُزامن لاحقاً' : '✅ تم تسجيل الزيارة'), idx === 'red' ? 'warning' : 'success');
+      Router.paint(Router.views['nurse']);
+    });
+  },
+});
+function recentVisits() {
+  const rows = DB.all('vitals').slice().sort((a, b) => new Date(b.at) - new Date(a.at)).slice(0, 6).map(v => {
+    const p = Store.patient(v.patientId);
+    return '<div class="alert-row"><div class="a-ico" style="background:var(--purple-050)">💉</div><div><b>' + esc(p ? p.name : '—') + '</b>' +
+      '<span class="small muted">ض ' + v.bpSys + '/' + v.bpDia + ' • سكر ' + v.glucose + ' • SpO2 ' + v.spo2 + '%</span>' +
+      '<div class="small">' + fmtDate(v.at) + (v.synced ? '' : ' <span class="chip chip-orange">🟠 غير مزامن</span>') + '</div></div></div>';
+  }).join('');
+  return rows || UI.empty('🗓️', 'لا زيارات بعد');
+}
+function syncNow() {
+  DB.all('vitals').forEach(v => { v.synced = true; });
+  DB.save();
+  toast('🛰️ تمت المزامنة مع الخادم — جميع البيانات محدثة', 'success');
+}
+
+/* ============ 22. لوحة DASS ============ */
+Router.register('dass', {
+  roles: ['dass'],
+  async render() {
+    const rows = DB.all('dass').slice().sort((a, b) => new Date(b.at) - new Date(a.at)).map(d => {
+      const p = Store.patient(d.patientId);
+      const st = d.status === 'accepted' ? '<span class="badge badge-green">مقبول</span>' : d.status === 'rejected' ? '<span class="badge badge-red">مرفوض</span>' : '<span class="badge badge-orange">قيد الدراسة</span>';
+      return '<tr><td><b>' + esc(p ? p.name : '—') + '</b></td><td>' + esc(d.type) + '</td><td class="small muted">' + esc(d.details) + '</td>' +
+        '<td>' + fmtDay(d.at) + '</td><td>' + st + '</td>' +
+        '<td><button class="btn btn-soft btn-sm" data-dec="' + d.id + '" data-st="accepted">✓ قبول</button> ' +
+        '<button class="btn btn-ghost btn-sm" data-dec="' + d.id + '" data-st="rejected">✕ رفض</button></td></tr>';
+    }).join('');
+    return shellFrame(
+      '<div class="section-head"><h2>لوحة DASS — النشاط الاجتماعي والتضامن</h2>' +
+      '<button class="btn btn-primary" onclick="newDassRequest()">➕ طلب اجتماعي</button></div>' +
+      '<div class="grid grid-3 mb-24">' +
+      '<div class="card stat-card"><div class="s-ico bg-purple-soft">🧑‍🧑‍🧒</div><div><div class="s-num">' + DB.all('dass').length + '</div><div class="s-lab">طلبات</div></div></div>' +
+      '<div class="card stat-card"><div class="s-ico bg-orange-soft">⏳</div><div><div class="s-num">' + DB.all('dass').filter(x => x.status === 'under_study' || x.status === 'pending').length + '</div><div class="s-lab">قيد الدراسة</div></div></div>' +
+      '<div class="card stat-card"><div class="s-ico bg-green-soft">🤝</div><div><div class="s-num">' + DB.all('dass').filter(x => x.status === 'accepted').length + '</div><div class="s-lab">تدخلات مقبولة</div></div></div></div>' +
+      '<div class="card"><div class="card-title"><span class="ico">🏛️</span> الملفات الاجتماعية — متابعة الحالات الهشة</div>' +
+      '<div class="table-wrap"><table class="tbl"><thead><tr><th>المستفيد</th><th>النوع</th><th>التفاصيل</th><th>التاريخ</th><th>الحالة</th><th>القرار</th></tr></thead><tbody>' + rows + '</tbody></table></div></div>'
+    );
+  },
+  bind(el) {
+    bindGlobal(el);
+    el.querySelectorAll('[data-dec]').forEach((b) => b.addEventListener('click', () => {
+      const d = DB.find('dass', x => x.id === b.dataset.dec);
+      if (d) { d.status = b.dataset.st; d.note = 'قرار ' + (b.dataset.st === 'accepted' ? 'قبول' : 'رفض'); DB.save(); toast('تم تسجيل القرار', 'success'); }
+      Router.paint(Router.views['dass']);
+    }));
+  },
+});
+function newDassRequest() {
+  const opts = DB.all('patients').map(p => '<option value="' + p.id + '">' + esc(p.name) + '</option>').join('');
+  const ov = UI.open(
+    UI.head('طلب اجتماعي جديد', '🏛️') +
+    '<div class="modal-body">' +
+    '<div class="form-group"><label>المستفيد</label><select class="form-control" id="ds-pat">' + opts + '</select></div>' +
+    '<div class="form-group"><label>نوع المساعدة</label><select class="form-control" id="ds-type"><option>مساعدة مالية</option><option>أجهزة مساعدة</option><option>دعم غذائي</option><option>متابعة أسبوعية</option></select></div>' +
+    '<div class="form-group"><label>التفاصيل</label><textarea class="form-control" id="ds-details"></textarea></div></div>' +
+    '<div class="modal-foot"><button class="btn btn-primary" id="ds-go">تسجيل</button></div>'
+  );
+  ov.querySelector('#ds-go').addEventListener('click', () => {
+    DB.insert('dass', { id: uid(), patientId: ov.querySelector('#ds-pat').value, type: ov.querySelector('#ds-type').value, details: ov.querySelector('#ds-details').value, status: 'pending', at: new Date().toISOString(), note: '' });
+    UI.close(ov); toast('تم تسجيل الطلب الاجتماعي', 'success');
+    Router.paint(Router.views['dass']);
+  });
+}
+
+/* ============ 23. متابعة العائلة ============ */
+Router.register('family', {
+  roles: ['family'],
+  async render() {
+    const linked = DB.all('patients').filter(p => p.familyId === 'u-family' || p.companionId === 'u-family');
+    const cards = linked.map(p => {
+      const v = Store.vitalsOf(p.id);
+      const last = v.length ? v[v.length - 1] : null;
+      const mon = p.monitor || {};
+      return '<div class="card">' +
+        '<div class="flex items-center gap-12 mb-12">' + avatarOf(p.name, p.avatar, 52) +
+        '<div><b style="font-size:17px">' + esc(p.name) + '</b><div class="small muted">' + esc(p.uid) + '</div>' +
+        '<div class="mt-8">' + UI.statusBadge(p.index) + '</div></div></div>' +
+        '<div class="vit-grid" style="grid-template-columns:repeat(3,1fr)">' +
+        vitTile('الضغط', (last ? last.bpSys + '/' + last.bpDia : (mon.bp || '—')), 'mmHg', '') +
+        vitTile('السكر', (last ? last.glucose : (mon.glucose || '—')), 'g/L', '') +
+        vitTile('SpO2', (last ? last.spo2 : (mon.spo2 || '—')), '%', '') + '</div>' +
+        '<div class="kv mt-12"><span>البروتوكول</span><b>' + (p.protocolId ? '<span class="chip chip-green">نشط</span>' : '<span class="chip chip-line">—</span>') + '</b></div>' +
+        '<div class="kv"><span>آخر زيارة</span><b>' + fmtDate(p.lastVisit) + '</b></div>' +
+        UI.contactBtns(p.phone, '<button class="btn btn-soft btn-sm" onclick="videoCall()">📹 مكالمة فيديو</button>') +
+        '</div>';
+    }).join('');
+    const alerts = DB.all('alerts').slice(0, 5).map(a =>
+      '<div class="alert-row"><div class="a-ico" style="background:var(--purple-050)">' + a.icon + '</div><div><b>' + esc(a.title) + '</b><p class="small muted">' + esc(a.message) + '</p><span class="small" style="color:var(--purple)">' + fmtDate(a.at) + '</span></div></div>').join('');
+    return shellFrame(
+      '<div class="section-head"><h2>متابعة العائلة — الرعاية عن بعد</h2></div>' +
+      '<div class="grid grid-2 mb-24">' + (cards || UI.empty('👨‍👩‍👧', 'لا يوجد مستفيد مرتبط')) + '</div>' +
+      '<div class="card"><div class="card-title"><span class="ico">🔔</span> تنبيهات الأشخاص المتابعين</div>' + alerts + '</div>'
+    );
+  },
+  bind(el) { bindGlobal(el); },
+});
+function videoCall() {
+  const ov = UI.open(
+    UI.head('مكالمة فيديو', '📹') +
+    '<div class="modal-body"><div class="card" style="background:linear-gradient(150deg,#1A1A3A,#2A1E5E);color:#fff;text-align:center;min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px">' +
+    '<div style="font-size:56px">👨‍⚕️</div><b id="vc-st">جاري الاتصال...</b><p class="small" style="opacity:.75">مكالمة فيديو مباشرة عبر VITAL DZ</p></div></div>' +
+    '<div class="modal-foot"><button class="btn btn-danger" id="vc-end">📵 إنهاء المكالمة</button></div>'
+  );
+  setTimeout(() => { const s = ov.querySelector('#vc-st'); if (s) { s.textContent = '🎥 المكالمة متصلة — صوت وصورة HD'; } }, 2200);
+  ov.querySelector('#vc-end').addEventListener('click', () => UI.close(ov));
+}
+
+/* ============ 24. تطبيق المريض VITAL DZ ============ */
+Router.register('mobile', {
+  roles: ['patient', 'family'],
+  async render() {
+    const p = Store.role === 'patient' ? Store.patient(Store.user.id) : Store.patients[0];
+    if (!p) return shellFrame(UI.empty('📱', 'لا يوجد ملف مستفيد'));
+    const trip = Store.tripOf(p.id);
+    const svcs = [
+      ['sos', '🚨', 'SOS'],
+      ['nurse', '💉', 'طلب ممرض'],
+      ['myfile', '❤️', 'ملفي الصحي'],
+      ['appts', '📅', 'مواعيدي'],
+      ['meds', '💊', 'أدويتي'],
+      ['vitals', '📊', 'مؤشرات صحية'],
+      ['trip', '🧳', 'برنامجي السياحي'],
+      ['qr', '🔳', 'بطاقتي'],
+      ['call', '☎', 'اتصال'],
+    ].map(([k, ic, t]) =>
+      '<div class="p-service" data-svc="' + k + '"><div class="ps-ico">' + ic + '</div><small>' + t + '</small></div>').join('');
+    const v = Store.vitalsOf(p.id);
+    const last = v.length ? v[v.length - 1] : null;
+    return shellFrame(
+      '<div class="section-head"><h2>تطبيق ' + APP.app + ' — واجهة المستفيد</h2>' +
+      '<span class="conn-pill ' + (Store.connected() ? 'conn-on' : 'conn-off') + '">' + (Store.connected() ? '🟢 متصل' : '🟠 Offline — البيانات محفوظة محلياً') + '</span></div>' +
+      '<div class="grid grid-2">' +
+      '<div class="phone-frame"><div class="phone-screen">' +
+      '<div class="phone-status"><span>VITAL DZ</span><span>5G • 98%</span><span>🔋</span></div>' +
+      '<div class="phone-body">' +
+      '<div class="p-app-title"><b>' + APP.app + '</b><span class="badge badge-green">🛡️ محمي</span></div>' +
+      '<div class="p-card" style="background:linear-gradient(140deg,#22214A,var(--purple));color:#fff">' +
+      '<div class="small" style="opacity:.8">المستفيد</div>' +
+      '<div class="flex items-center gap-10 mt-8">' + avatarOf(p.name, p.avatar, 40) +
+      '<div><b style="font-size:16px">' + esc(p.name) + '</b><div class="small" style="opacity:.8">' + esc(p.uid) + '</div></div></div>' +
+      '<div class="mt-12">' + UI.statusBadge(p.index) + UI.catBadge(p.category) + '</div></div>' +
+      '<button class="sos-fab" style="position:static;width:110px;height:110px;margin:2px auto;animation:none" onclick="openSOS()">🚨<br>SOS</button>' +
+      '<div class="p-card" style="text-align:center"><b class="small muted">بطاقتي الذكية</b>' +
+      '<div style="display:flex;justify-content:center" class="mt-8">' + renderQR(p.uid, 120) + '</div></div>' +
+      '<div class="p-card"><b class="small muted">الخدمات السريعة</b><div class="p-services mt-8">' + svcs + '</div></div>' +
+      (trip ? '<div class="p-card" style="border:1.6px solid var(--purple)"><b>🧳 ' + esc(trip.number) + '</b>' +
+      '<div class="small muted">' + esc(trip.hotel) + ' — ' + esc(trip.agency) + '</div>' +
+      '<span class="badge badge-purple mt-8">مؤكد — رحلة جارية</span></div>' : '') +
+      '</div></div></div>' +
+      '<div><div class="card"><div class="card-title"><span class="ico">📊</span> آخر المؤشرات</div>' +
+      (last ? '<div class="vit-grid">' +
+        vitTile('الضغط', last.bpSys + '/' + last.bpDia, 'mmHg', '') + vitTile('السكر', last.glucose, 'g/L', '') +
+        vitTile('النبض', last.pulse, '/د', '') + vitTile('SpO2', last.spo2, '%', '') + '</div>' +
+        '<p class="small muted mt-8">' + fmtDate(last.at) + ' — بواسطة ' + esc(last.by) + '</p>' : UI.empty('📈', 'لا قياسات بعد')) +
+      '</div>' +
+      '<div class="card mt-16"><div class="card-title"><span class="ico">💊</span> جدول الأدوية بحماية الجرعة المزدوجة</div>' +
+      '<div class="flex" style="flex-direction:column;gap:8px">' +
+      (p.medications || []).map((m, i) =>
+        '<div class="card" style="padding:14px;display:flex;align-items:center;justify-content:space-between;gap:10px"><div><b class="small">💊 ' + esc(m.name) + '</b><p class="small muted">' + esc(m.dose) + '</p></div>' +
+        '<button class="btn btn-soft btn-sm" data-dose="' + i + '">تأكيد الجرعة</button></div>').join('') +
+      '</div><p class="small muted mt-8">🛡️ نظام الحماية الذكي يمنع الجرعة المزدوجة تلقائياً.</p></div>' +
+      '<div class="card mt-16"><div class="card-title"><span class="ico">🔋</span> تسجيل مؤشرات من المنزل</div>' +
+      '<div class="form-row"><div class="form-group"><label>السكر g/L</label><input class="form-control" id="mg-glu" placeholder="1.10"></div>' +
+      '<div class="form-group"><label>الضغط</label><div class="flex gap-8"><input class="form-control" id="mg-sys" placeholder="120"><input class="form-control" id="mg-dia" placeholder="80"></div></div></div>' +
+      '<button class="btn btn-primary btn-block" id="mg-save">حفظ القياس</button></div>' +
+      '</div></div>'
+    );
+  },
+  bind(el) {
+    bindGlobal(el);
+    el.querySelectorAll('[data-svc]').forEach((b) => b.addEventListener('click', () => {
+      const k = b.dataset.svc;
+      const p = Store.role === 'patient' ? Store.patient(Store.user.id) : Store.patients[0];
+      if (k === 'sos') openSOS();
+      else if (k === 'nurse') { toast('💉 تم إرسال طلب ممرض متنقل — سيتم التواصل قريباً', 'success'); }
+      else if (k === 'myfile') openFile(p.id);
+      else if (k === 'appts') { const pr = Store.protocolOf(p.id); if (pr) openProtocol(pr.id); else toast('لا مواعيد مسجلة', 'error'); }
+      else if (k === 'meds') { toast('💊 جدول الأدوية معروض بالأسفل', 'success'); }
+      else if (k === 'vitals') openFile(p.id);
+      else if (k === 'trip') { const t = Store.tripOf(p.id); if (t) openTripCard(t.id); else toast('غير مسجل في برنامج سياحي', 'error'); }
+      else if (k === 'qr') Router.go('card');
+      else if (k === 'call') toast('☎ جارٍ الاتصال...', 'success');
+    }));
+    el.querySelectorAll('[data-dose]').forEach((b) => b.addEventListener('click', () => {
+      if (b.disabled) return;
+      b.disabled = true; b.textContent = '✓ تم'; b.classList.remove('btn-soft'); b.classList.add('btn-line');
+      toast('💊 تم تأكيد الجرعة — الحماية من الجرعة المزدوجة مفعلة', 'success');
+    }));
+    const sv = el.querySelector('#mg-save');
+    if (sv) sv.addEventListener('click', () => {
+      const p = Store.role === 'patient' ? Store.patient(Store.user.id) : Store.patients[0];
+      const v = {
+        id: uid(), patientId: p.id,
+        bpSys: parseInt(el.querySelector('#mg-sys').value, 10) || 0,
+        bpDia: parseInt(el.querySelector('#mg-dia').value, 10) || 0,
+        glucose: parseFloat(el.querySelector('#mg-glu').value) || 0,
+        pulse: 0, temp: 0, spo2: 0, weight: 0,
+        source: 'منزل المستفيد', by: p.name, note: '',
+        at: new Date().toISOString(), synced: Store.connected(),
+      };
+      DB.insert('vitals', v);
+      let idx = 'green';
+      if (v.bpSys >= 160 || v.glucose >= 1.8) idx = 'red';
+      else if (v.bpSys >= 140 || v.glucose >= 1.4) idx = 'orange';
+      p.index = idx; p.lastVisit = v.at;
+      if (idx === 'red') DB.insert('alerts', { id: uid(), type: 'critical', icon: '🔴', title: 'قياس حرج منزلي', message: 'سجل ' + p.name + ' قياساً حرجاً (ضغط ' + v.bpSys + '/' + v.bpDia + '، سكر ' + v.glucose + ').', patientId: p.id, at: v.at, read: false });
+      DB.save();
+      toast(idx === 'red' ? '🚨 قياس حرج — تم إخطار الطبيب والعائلة' : '✅ تم حفظ القياس', idx === 'red' ? 'warning' : 'success');
+      Router.paint(Router.views['mobile']);
+    });
+  },
+});
+
+/* ============ 25. ملفي الصحي (مستفيد) ============ */
+Router.register('myfile', {
+  roles: ['patient'],
+  async render() {
+    const p = Store.patient(Store.user.id);
+    return shellFrame(
+      '<div class="section-head"><h2>ملفي الصحي الموحد</h2></div>' +
+      '<div class="grid grid-2">' + smartCard(p) + '</div>'
+    );
+  },
+  bind(el) { bindGlobal(el); },
+});
+
+/* ============ 26. بطاقة المتابعة الصحية + الطباعة ============ */
+Router.register('card', {
+  roles: null,
+  async render() {
+    const p = Store.role === 'patient' ? Store.patient(Store.user.id) : (Store.selectedId ? Store.patient(Store.selectedId) : Store.patients[0]);
+    if (!p) return shellFrame(UI.empty('🪪', 'لا يوجد مستفيد'));
+    return shellFrame(
+      '<div class="section-head"><h2>بطاقة المتابعة الصحية الذكية</h2>' +
+      '<div class="flex gap-8"><button class="btn btn-soft" onclick="openPrint(\'' + p.id + '\')">🖨 طباعة</button>' +
+      '<button class="btn btn-line" onclick="UI.confirm(\'إصدار بطاقة بديلة؟\',()=>{toast(\'🪪 تم إصدار بطاقة بديلة — رقم جديد\',\'success\')},\'إصدار\')">🔄 إصدار بديلة</button></div></div>' +
+      '<div class="card" style="display:flex;justify-content:center;flex-direction:column;align-items:center">' + healthCardHTML(p) +
+      '<div class="flex gap-8 mt-16"><button class="btn btn-primary" onclick="openPrint(\'' + p.id + '\')">🖨 طباعة / حفظ PDF</button>' +
+      '<button class="btn btn-line" onclick="UI.toast(\'إعادة الطباعة جاهزة\')">↻ إعادة طباعة</button></div></div>'
+    );
+  },
+  bind(el) { bindGlobal(el); },
+});
+function healthCardHTML(p) {
+  const contact = (p.guardian || {}).name || Store.personName(p.familyId) || '—';
+  const contactPhone = (p.guardian || {}).phone || (Store.userById(p.familyId) || {}).phone || '14';
+  return '<div class="hc-card">' +
+    '<div class="hc-top"><div class="hc-brand"><span class="mini">⚕️</span>VITALINK DZ</div>' +
+    '<div class="hc-brand"><span class="mini">📱</span>VITAL DZ</div></div>' +
+    '<div class="hc-body">' + avatarOf(p.name, p.avatar, 74) +
+    '<div class="hc-info"><b>' + esc(p.name) + '</b><div class="u">' + esc(p.uid) + ' • ' + esc(p.fileNo) + '</div>' +
+    '<div class="small mt-8" style="opacity:.9">فصيلة الدم: <b>' + esc(p.bloodType || '—') + '</b></div></div></div>' +
+    '<div class="hc-rows">' +
+    '<div class="hc-row"><span>جهة الاتصال للطوارئ</span><b>' + esc(contact) + ' — ' + esc(contactPhone) + '</b></div>' +
+    '<div class="hc-row"><span>نوع المستفيد</span><b>' + esc(p.categoryName) + '</b></div>' +
+    '<div class="hc-row"><span>المؤشر الحالي</span><b>' + (p.index === 'green' ? '🟢 مستقر' : p.index === 'orange' ? '🟠 يحتاج متابعة' : '🔴 خطر') + '</b></div>' +
+    '</div>' +
+    '<div class="hc-qr">' + renderQR(p.uid, 120) + '</div>' +
+    '<div class="hc-foot"><span>بطاقة رقم: ' + esc(p.fileNo) + '</span><span>الإصدار: 01/08/2026</span></div>' +
+    '</div>';
+}
+function openPrint(pid) {
+  const p = Store.patient(pid);
+  if (!p) return;
+  const area = document.createElement('div');
+  area.id = 'print-area';
+  area.innerHTML = healthCardHTML(p);
+  document.body.appendChild(area);
+  window.print();
+  setTimeout(() => area.remove(), 300);
+}
+
+/* ============ 27. السياحة العلاجية ============ */
+Router.register('tourism', {
+  roles: ['admin', 'hospital', 'agency', 'guide'],
+  async render() {
+    const pkgs = DB.all('packages').map(x =>
+      '<div class="card"><div style="font-size:34px">' + x.icon + '</div><b class="mt-8" style="display:block">' + esc(x.name) + '</b>' +
+      '<div class="small muted">' + esc(x.type) + '</div>' +
+      '<div class="kv mt-12"><span>الوجهة</span><b>' + esc(x.destination) + '</b></div>' +
+      '<div class="kv"><span>المدة / السعر</span><b>' + x.duration + ' — ' + x.price.toLocaleString() + ' دج</b></div>' +
+      '<p class="small muted mt-8">' + esc(x.desc) + '</p>' +
+      '<button class="btn btn-soft btn-block mt-12" onclick="UI.toast(\'تم عرض تفاصيل ' + esc(x.name) + '\')">عرض</button></div>').join('');
+    const trips = DB.all('trips').map(t => {
+      const p = Store.patient(t.patientId);
+      return '<div class="card"><div class="flex items-center gap-12">' + avatarOf(t.beneficiary, p ? p.avatar : 'avatar-1', 44) +
+        '<div><b>' + esc(t.beneficiary) + '</b><div class="small muted">' + esc(t.number) + '</div></div>' +
+        '<div style="flex:1"></div><span class="badge badge-purple">مؤكد</span></div>' +
+        '<div class="kv mt-12"><span>الوجهة</span><b>♨️ ' + esc(t.hotel) + '</b></div>' +
+        '<div class="kv"><span>المدة</span><b>' + fmtDay(t.start) + ' ← ' + fmtDay(t.end) + '</b></div>' +
+        '<div class="kv"><span>الوكالة / المرشد</span><b>' + esc(t.agency) + ' — ' + esc(t.guide) + '</b></div>' +
+        '<button class="btn btn-line btn-sm btn-block mt-12" onclick="openTripCard(\'' + t.id + '\')">عرض ملف الرحلة</button></div>';
+    }).join('');
+    const parties = [
+      ['🏢', 'الوكالات', DB.all('agencies').map(x => '<span class="chip">' + esc(x.name) + '</span>').join('')],
+      ['🏨', 'الفنادق', DB.all('hotels').map(x => '<span class="chip">' + esc(x.name) + '</span>').join('')],
+      ['🏥', 'المؤسسات الصحية', DB.all('institutions').map(x => '<span class="chip">' + esc(x.name) + '</span>').join('')],
+      ['🧭', 'المرشدون', DB.all('guides').map(x => '<span class="chip">' + esc(x.name) + '</span>').join('')],
+      ['💉', 'ممرضون مرافقون', DB.all('escorts').map(x => '<span class="chip">' + esc(x.name) + '</span>').join('')],
+    ].map(([ic, t, ch]) =>
+      '<div class="card"><div class="card-title" style="font-size:14px"><span class="ico">' + ic + '</span> ' + t + '</div><div class="list-chips">' + ch + '</div></div>').join('');
+    return shellFrame(
+      '<div class="section-head"><h2>لوحة السياحة العلاجية — Travel + Care</h2>' +
+      '<button class="btn btn-primary" onclick="registerToProgram()">➕ تسجيل مستفيد</button></div>' +
+      '<div class="card mb-24" style="background:linear-gradient(140deg,#22214A,var(--purple));color:#fff;border:none">' +
+      '<h3>الملف الصحي + الملف السياحي + البرنامج العلاجي</h3>' +
+      '<p class="small" style="opacity:.85">المنصة تربط الحالة الصحية بالمسار السياحي العلاجي مع فصل منطقي بين الملفين: الوكالة لا ترى الملف الطبي الكامل، والمرشد يرى الاحتياطات الضرورية فقط.</p></div>' +
+      '<div class="grid grid-3 mb-24">' +
+      '<div class="card"><div class="card-title" style="font-size:14px"><span class="ico">🧳</span> البرامج المتاحة</div><div class="flex" style="flex-direction:column;gap:8px">' + DB.all('packages').map(x => '<div class="kv"><span>' + x.icon + ' ' + esc(x.name) + '</span><b>' + esc(x.destination) + '</b></div>').join('') + '</div></div>' +
+      '<div class="card"><div class="card-title" style="font-size:14px"><span class="ico">🧑‍🤝‍🧑</span> المستفيدون المسجلون</div><div class="flex" style="flex-direction:column;gap:8px">' + DB.all('trips').map(t => '<div class="kv"><span>' + esc(t.beneficiary) + '</span><b>' + esc(t.number) + '</b></div>').join('') + '</div></div>' +
+      '<div class="card"><div class="card-title" style="font-size:14px"><span class="ico">✈️</span> الرحلات القادمة</div><div class="flex" style="flex-direction:column;gap:8px">' + DB.all('trips').map(t => '<div class="kv"><span>' + esc(t.hotel) + '</span><b>' + fmtDay(t.end) + '</b></div>').join('') + '</div></div></div>' +
+      '<div class="grid grid-2 mb-24"><div class="card"><div class="card-title"><span class="ico">🛍️</span> باقات البرامج</div><div class="grid grid-2">' + pkgs + '</div></div>' +
+      '<div><div class="card mb-16"><div class="card-title"><span class="ico">🎫</span> ملفات الرحلات النشطة</div>' + (trips || UI.empty('🧳', 'لا رحلات مسجلة بعد')) + '</div>' +
+      '<div class="grid grid-2">' + parties + '</div></div></div>'
+    );
+  },
+  bind(el) { bindGlobal(el); },
+});
+function openTripCard(tid) {
+  const t = DB.find('trips', x => x.id === tid);
+  if (!t) return;
+  UI.open(
+    UI.head('ملف الرحلة العلاجية — ' + t.number, '🧳') +
+    '<div class="modal-body">' +
+    '<div class="flex items-center gap-12 mb-16">' + avatarOf(t.beneficiary, 'avatar-5', 56) +
+    '<div><b style="font-size:18px">' + esc(t.beneficiary) + '</b><div class="small muted">' + esc(t.number) + ' — حالة: <span class="badge badge-green">مؤكد</span></div></div></div>' +
+    '<div class="kv"><span>البرنامج</span><b>' + esc(t.hotel) + '</b></div>' +
+    '<div class="kv"><span>الوجهة</span><b>' + esc(t.hotel) + '</b></div>' +
+    '<div class="kv"><span>الفندق</span><b>🏨 ' + esc(t.hotel) + '</b></div>' +
+    '<div class="kv"><span>المؤسسة الصحية</span><b>🏥 ' + esc(t.institution) + '</b></div>' +
+    '<div class="kv"><span>الطبيب / الممرض</span><b>🩺 ' + esc(t.doctor) + ' — 💉 ' + esc(t.nurse) + '</b></div>' +
+    '<div class="kv"><span>المرشد / الوكالة</span><b>🧭 ' + esc(t.guide) + ' — 🏢 ' + esc(t.agency) + '</b></div>' +
+    '<div class="kv"><span>النقل</span><b>🚐 ' + esc(t.transport) + '</b></div>' +
+    '<div class="kv"><span>المدة</span><b>' + fmtDay(t.start) + ' ← ' + fmtDay(t.end) + '</b></div>' +
+    '<div class="mt-12"><b class="small muted">الخدمات المطلوبة</b><div class="list-chips mt-8">' + t.services.map(x => '<span class="chip">✓ ' + esc(x) + '</span>').join('') + '</div></div>' +
+    '<div class="mt-12 card" style="background:var(--purple-050)"><b class="small muted">الاحتياجات</b>' +
+    '<div class="kv mt-8"><span>صحية</span><b>' + esc(t.needs.health) + '</b></div>' +
+    '<div class="kv"><span>خاصة</span><b>' + esc(t.needs.special) + '</b></div>' +
+    '<div class="kv"><span>نقل</span><b>' + esc(t.needs.transport) + '</b></div></div>' +
+    '</div>' +
+    '<div class="modal-foot"><button class="btn btn-primary" data-close>إغلاق</button></div>'
+  );
+}
+function addToTrip(pid, pkid) {
+  const p = Store.patient(pid);
+  const pk = DB.find('packages', x => x.id === pkid);
+  if (!p || !pk) return;
+  const n = DB.all('trips').length + 1;
+  DB.insert('trips', {
+    id: uid(), number: 'TP-2026-' + String(n).padStart(3, '0'), patientId: pid, packageId: pkid,
+    beneficiary: p.name, status: 'confirmed',
+    start: new Date().toISOString(), end: new Date(Date.now() + 7 * 864e5).toISOString(),
+    hotel: 'فندق الوجهة', institution: 'مؤسسة صحية شريكة', doctor: Store.personName(p.doctorId), nurse: 'الممرضة سارة بلقاسم',
+    guide: 'المرشد إبراهيم بوزيد', agency: 'وكالة صحراء فيتا', transport: 'نقل مكيف خاص',
+    services: ['جلسات علاجية', 'إقامة', 'مرافقة طبية'],
+    needs: { health: 'متابعة حسب البروتوكول', special: 'تسهيلات الحركة', transport: 'نقل مكيف' },
+  });
+  p.tourismId = pkid;
+  DB.save();
+  UI.close(document.getElementById('modals').lastChild);
+  UI.toast('➕ تمت إضافة المستفيد إلى البرنامج السياحي — أنشئ ملف الرحلة وتم ربط الجهات', 'success');
+  Router.paint(Router.views['tourism']);
+}
+function registerToProgram() {
+  const opts = DB.all('patients').map(p => '<option value="' + p.id + '">' + esc(p.name) + '</option>').join('');
+  const pks = DB.all('packages').map(x => '<option value="' + x.id + '">' + esc(x.name) + ' — ' + esc(x.destination) + '</option>').join('');
+  const ov = UI.open(
+    UI.head('التسجيل في برنامج سياحي علاجي', '🧳') +
+    '<div class="modal-body">' +
+    '<div class="steps" style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap">' +
+    ['QR', 'التعرف', 'التحقق', 'الاحتياجات', 'اختيار البرنامج', 'ربط الجهات', 'التأكيد'].map((s, i) =>
+      '<span class="chip" style="background:var(--purple-100);color:var(--purple-600)">' + (i + 1) + '. ' + s + '</span>').join('') + '</div>' +
+    '<div class="form-group"><label>المستفيد</label><select class="form-control" id="tp-pat">' + opts + '</select></div>' +
+    '<div class="form-group"><label>البرنامج</label><select class="form-control" id="tp-pkg">' + pks + '</select></div>' +
+    '<div class="form-group"><label>احتياجات خاصة</label><input class="form-control" id="tp-need" placeholder="مثال: عكازة، كرسي متحرك..."></div>' +
+    '<div class="form-group"><label>مدة الإقامة (أيام)</label><input class="form-control" id="tp-days" value="7"></div>' +
+    '</div>' +
+    '<div class="modal-foot"><button class="btn btn-primary" id="tp-go">➕ إضافة إلى البرنامج السياحي</button></div>'
+  );
+  ov.querySelector('#tp-go').addEventListener('click', () => {
+    addToTrip(ov.querySelector('#tp-pat').value, ov.querySelector('#tp-pkg').value);
+  });
+}
+
+/* ============ 28. برنامجي السياحي (مستفيد) ============ */
+Router.register('mytrip', {
+  roles: ['patient'],
+  async render() {
+    const p = Store.patient(Store.user.id);
+    const t = Store.tripOf(p.id);
+    if (!t) return shellFrame(UI.empty('🧳', 'غير مسجل بعد في برنامج سياحي علاجي'));
+    return shellFrame(
+      '<div class="section-head"><h2>بطاقة السياحة العلاجية الرقمية</h2></div>' +
+      '<div class="grid grid-2">' +
+      '<div class="card" style="display:flex;flex-direction:column;align-items:center">' +
+      '<div class="hc-card">' +
+      '<div class="hc-top"><div class="hc-brand"><span class="mini">⚕️</span>VITALINK DZ</div><span class="badge badge-green">مؤكد</span></div>' +
+      '<div class="hc-body">' + avatarOf(t.beneficiary, p.avatar, 74) + '<div class="hc-info"><b>' + esc(t.beneficiary) + '</b><div class="u">' + esc(t.number) + '</div><div class="small mt-8" style="opacity:.9">برنامج: ' + esc(t.hotel) + '</div></div></div>' +
+      '<div class="hc-rows"><div class="hc-row"><span>الوجهة</span><b>♨️ ' + esc(t.hotel) + '</b></div>' +
+      '<div class="hc-row"><span>المدة</span><b>' + fmtDay(t.start) + ' ← ' + fmtDay(t.end) + '</b></div>' +
+      '<div class="hc-row"><span>الوكالة</span><b>' + esc(t.agency) + '</b></div>' +
+      '<div class="hc-row"><span>المرافق الطبي</span><b>' + esc(t.nurse) + '</b></div></div>' +
+      '<div class="hc-qr">' + renderQR(t.number, 110) + '</div></div>' +
+      '<p class="small muted mt-12">تظهر البطاقة داخل تطبيق ' + APP.app + ' أثناء الرحلة.</p></div>' +
+      '<div class="card"><div class="card-title"><span class="ico">🏥</span> تفاصيل البرنامج</div>' +
+      '<div class="kv"><span>المؤسسة الصحية</span><b>' + esc(t.institution) + '</b></div>' +
+      '<div class="kv"><span>الطبيب المشرف</span><b>🩺 ' + esc(t.doctor) + '</b></div>' +
+      '<div class="kv"><span>المرشد</span><b>🧭 ' + esc(t.guide) + '</b></div>' +
+      '<div class="kv"><span>النقل</span><b>🚐 ' + esc(t.transport) + '</b></div>' +
+      '<div class="mt-12"><b class="small muted">الخدمات</b><div class="list-chips mt-8">' + t.services.map(x => '<span class="chip">✓ ' + esc(x) + '</span>').join('') + '</div></div>' +
+      '<div class="mt-12 card" style="background:var(--purple-050)"><b class="small muted">البروتوكول المرتبط</b>' +
+      '<p class="small mt-8">متابعة ' + (p.chronic || []).join('، ') + ' أثناء الرحلة حسب تعليمات الطبيب.</p></div>' +
+      UI.contactBtns((Store.user || {}).phone, '') +
+      '</div></div>'
+    );
+  },
+  bind(el) { bindGlobal(el); },
+});
+
+/* ============ 29. الماسح الذكي QR ============ */
+Router.register('qr', {
+  roles: null,
+  async render() {
+    const p = Store.role === 'patient' ? Store.patient(Store.user.id) : (Store.selectedId ? Store.patient(Store.selectedId) : Store.patients[0]);
+    const scenarios = [
+      ['emergency', '🚨', 'طوارئ / شخص عادي', 'بيانات الطوارئ الضرورية فقط'],
+      ['doctor', '🩺', 'طبيب / مستشفى', 'الملف الصحي المصرح به كاملاً'],
+      ['nurse', '💉', 'ممرض متنقل', 'الملف + تسجيل زيارة Offline'],
+      ['guide', '🧭', 'مرشد سياحي', 'الاحتياطات الصحية للرحلة'],
+      ['agency', '🏢', 'وكالة سياحية', 'الملف السياحي العلاجي'],
+      ['hospital', '🏥', 'مستشفى سياحي', 'الجاهزية الصحية للبرنامج'],
+    ].map(([k, ic, t, d]) =>
+      '<button class="card" data-sc="' + k + '" style="text-align:start;cursor:pointer;transition:.2s;display:block;width:100%">' +
+      '<div style="font-size:30px">' + ic + '</div><b class="mt-8" style="display:block">' + t + '</b><div class="small muted">' + d + '</div></button>').join('');
+    return shellFrame(
+      '<div class="section-head"><h2>الماسح الذكي VITA-DZ — Smart QR</h2>' +
+      '<span class="conn-pill conn-on">🛡️ تشفير AES-256</span></div>' +
+      '<div class="grid grid-2">' +
+      '<div class="card" style="display:flex;flex-direction:column;align-items:center;justify-content:center">' +
+      '<div class="small muted mb-8">بطاقة ' + esc(p.name) + ' — الرمز المعرف الآمن</div>' +
+      '<div class="qr-wrap">' + renderQR(p.uid, 170) + '</div>' +
+      '<p class="small muted mt-12" style="max-width:38ch;text-align:center">' +
+      'QR هو معرف وصول آمن فقط — لا تُخزن فيه البيانات الطبية الحساسة. عند المسح: تحقق ← تحديد المستخدم ← تحديد الصلاحيات ← تحديد الغرض ← عرض البيانات المسموح بها.</p>' +
+      '<div class="flex gap-8 mt-16"><button class="btn btn-primary" onclick="UI.toast(\'محاكاة مسح الكاميرا\')">📷 مسح</button>' +
+      '<button class="btn btn-line" onclick="openQRlog()">📜 سجل المسح</button></div></div>' +
+      '<div><div class="card mb-16"><div class="card-title"><span class="ico">🎛️</span> اختر سيناريو المسح</div>' +
+      '<div class="grid grid-2">' + scenarios + '</div></div>' +
+      '<div id="qr-result"></div></div></div>'
+    );
+  },
+  bind(el) {
+    bindGlobal(el);
+    el.querySelectorAll('[data-sc]').forEach((b) => b.addEventListener('click', () => qrScenario(b.dataset.sc, el)));
+  },
+});
+function qrScenario(kind, root) {
+  const p = Store.role === 'patient' ? Store.patient(Store.user.id) : (Store.selectedId ? Store.patient(Store.selectedId) : Store.patients[0]);
+  const host = root ? root.querySelector('#qr-result') : document.getElementById('qr-result');
+  if (!host) return;
+  const when = new Date().toISOString();
+  const rn = Store.user ? Store.user.name : 'زائر';
+  const rr = Store.role ? roleName(Store.role) : 'غير محدد';
+  DB.logQR({ patientId: p.id, by: rn, role: rr, purpose: kind, accessed: kind === 'emergency' ? 'بيانات الطوارئ فقط' : kind === 'agency' || kind === 'guide' ? 'الملف السياحي' : 'الملف الصحي المصرح به', at: when });
+  const contactPhone = (p.guardian || {}).phone || (Store.userById(p.familyId) || {}).phone || p.phone;
+  let html = '';
+  if (kind === 'emergency') {
+    html = '<div class="card" style="border:2px solid var(--red)">' +
+      '<h3 style="color:var(--red)">🚨 تنبيه طبي</h3>' +
+      '<div class="kv mt-12"><span>المستفيد</span><b>' + esc(p.name) + '</b></div>' +
+      '<div class="kv"><span>الحالة</span><b>' + (p.chronic || []).join('، ') + '</b></div>' +
+      '<div class="kv"><span>الحساسية</span><b class="chip chip-red">' + esc((p.allergies || []).join('، ') || 'لا توجد') + '</b></div>' +
+      '<div class="kv"><span>فصيلة الدم</span><b>' + esc(p.bloodType || '—') + '</b></div>' +
+      '<div class="kv"><span>الأدوية الحالية</span><b>' + esc((p.medications || []).map(m => m.name).join('، ')) + '</b></div>' +
+      '<div class="kv"><span>جهة الاتصال</span><b>👨‍👩‍👧 ' + esc((p.guardian || {}).name || Store.personName(p.familyId)) + '</b></div>' +
+      UI.contactBtns(contactPhone, '<a class="btn btn-danger btn-sm" href="tel:14">🚑 الطوارئ 14</a>') +
+      '<p class="small muted mt-12">تم إرسال موقع المسح إلى جهة الاتصال وفق الإعدادات المعتمدة. لا يُعرض الملف الطبي الكامل.</p></div>';
+  } else if (kind === 'doctor') {
+    html = '<div class="card"><div class="card-title"><span class="ico">🩺</span> سياق الطبيب — الملف المصرح به</div>' +
+      '<div class="flex items-center gap-12 mb-12">' + avatarOf(p.name, p.avatar, 48) + '<div><b>' + esc(p.name) + '</b><div class="small muted">' + esc(p.uid) + '</div></div>' + UI.statusBadge(p.index) + '</div>' +
+      '<div class="kv"><span>الأمراض المزمنة</span><b>' + esc((p.chronic || []).join('، ') || '—') + '</b></div>' +
+      '<div class="kv"><span>الحساسية</span><b>' + esc((p.allergies || []).join('، ') || '—') + '</b></div>' +
+      '<div class="kv"><span>الأدوية</span><b>' + esc((p.medications || []).map(m => m.name + ' (' + m.dose + ')').join('، ')) + '</b></div>' +
+      '<div class="kv"><span>البروتوكول</span><b>' + (p.protocolId ? '<span class="chip chip-green">نشط</span>' : '—') + '</b></div>' +
+      '<button class="btn btn-soft btn-block mt-12" onclick="openFile(\'' + p.id + '\')">فتح الملف الكامل</button>' +
+      '<p class="small muted mt-8">✅ تم تسجيل عملية الدخول: ' + fmtDate(when) + '</p></div>';
+  } else if (kind === 'nurse') {
+    html = '<div class="card"><div class="card-title"><span class="ico">💉</span> سياق الممرض المتنقل</div>' +
+      '<div class="flex items-center gap-12 mb-12">' + avatarOf(p.name, p.avatar, 48) + '<div><b>' + esc(p.name) + '</b></div>' +
+      '<div style="flex:1"></div><span class="conn-pill conn-off">🟠 Offline</span></div>' +
+      '<p class="small muted">تم فتح الملف المسموح به. يمكن تسجيل الزيارة والقياسات والملاحظات وحفظها محلياً.</p>' +
+      '<button class="btn btn-primary btn-block mt-12" onclick="Router.go(\'nurse\');toast(\'افتح ملف ' + esc(p.name) + ' من بوابة الممرض\')">بدء تسجيل الزيارة</button>' +
+      '<p class="small muted mt-8">🛰️ عند عودة الإنترنت تبدأ المزامنة تلقائياً.</p></div>';
+  } else if (kind === 'guide') {
+    html = '<div class="card"><div class="card-title"><span class="ico">🧭</span> سياق المرشد السياحي</div>' +
+      '<div class="flex items-center gap-12 mb-12">' + avatarOf(p.name, p.avatar, 48) + '<div><b>' + esc(p.name) + '</b><div class="small muted">مستفيد في رحلة علاجية</div></div></div>' +
+      '<div class="kv"><span>الحالة الصحية العامة</span><b>' + UI.statusBadge(p.index) + '</b></div>' +
+      '<div class="kv"><span>الاحتياطات</span><b>' + esc((p.allergies || []).map(a => 'تجنب ' + a).join('، ') || 'لا احتياطات خاصة') + '</b></div>' +
+      '<div class="kv"><span>القيود</span><b>تفادي المجهود البدني — مواعيد القياس</b></div>' +
+      '<div class="kv"><span>البروتوكول المرتبط بالرحلة</span><b>' + (p.protocolId ? '<span class="chip chip-green">نشط</span>' : '—') + '</b></div>' +
+      '<div class="kv"><span>جهة اتصال الطوارئ</span><b>' + esc((p.guardian || {}).name || '—') + '</b></div>' +
+      '<p class="small muted mt-8">لا تظهر البيانات الطبية غير الضرورية.</p></div>';
+  } else if (kind === 'agency') {
+    html = '<div class="card"><div class="card-title"><span class="ico">🏢</span> سياق الوكالة السياحية — الملف السياحي العلاجي</div>' +
+      '<div class="flex items-center gap-12 mb-12">' + avatarOf(p.name, p.avatar, 48) + '<div><b>' + esc(p.name) + '</b></div></div>' +
+      '<div class="kv"><span>البرنامج</span><b>' + esc((DB.find('packages', x => x.id === p.tourismId) || {}).name || 'غير مسجل') + '</b></div>' +
+      '<div class="kv"><span>الاحتياجات الخاصة</span><b>' + (p.disability ? esc(p.disability.devices.join('، ')) : '—') + '</b></div>' +
+      '<div class="kv"><span>احتياجات النقل</span><b>🚐 نقل مكيف خاص</b></div>' +
+      '<div class="kv"><span>الإقامة</span><b>🏨 حسب الوجهة</b></div>' +
+      '<div class="kv"><span>المرافق الطبي</span><b>💉 ممرض مرافق</b></div>' +
+      '<button class="btn btn-primary btn-block mt-12" onclick="suggestTourism(\'' + p.id + '\')">➕ إضافة إلى البرنامج السياحي</button></div>';
+  } else if (kind === 'hospital') {
+    html = '<div class="card"><div class="card-title"><span class="ico">🏥</span> سياق المستشفى السياحي</div>' +
+      '<div class="flex items-center gap-12 mb-12">' + avatarOf(p.name, p.avatar, 48) + '<div><b>' + esc(p.name) + '</b></div>' +
+      '<div style="flex:1"></div><span class="badge badge-green">جاهز للبرنامج</span></div>' +
+      '<div class="kv"><span>البروتوكول</span><b>' + (p.protocolId ? '<span class="chip chip-green">نشط — قابل للمراجعة</span>' : '—') + '</b></div>' +
+      '<div class="kv"><span>المؤشرات</span><b>متاحة للمراجعة</b></div>' +
+      '<div class="kv"><span>التقارير</span><b>متاحة</b></div>' +
+      '<div class="kv"><span>التدخلات</span><b>قابلة للتسجيل</b></div>' +
+      '<button class="btn btn-soft btn-block mt-12" onclick="UI.toast(\'تم تأكيد الجاهزية الصحية للبرنامج\',\'success\')">✓ تأكيد الجاهزية الصحية</button></div>';
+  }
+  host.innerHTML = html;
+}
+function openQRlog() {
+  const rows = DB.all('qrLog').slice().reverse().slice(0, 12).map(l => {
+    const p = Store.patient(l.patientId);
+    return '<div class="alert-row"><div class="a-ico" style="background:var(--purple-050)">📷</div><div><b>' + esc(p ? p.name : '—') + '</b>' +
+      '<span class="small muted">' + esc(l.by) + ' — ' + esc(l.role) + '</span>' +
+      '<div class="small">الغرض: ' + esc(l.purpose) + ' • الوصول: ' + esc(l.accessed) + '</div>' +
+      '<span class="small" style="color:var(--purple)">' + fmtDate(l.at) + '</span></div></div>';
+  }).join('');
+  UI.open(UI.head('سجل عمليات QR', '📜') + '<div class="modal-body">' + (rows || UI.empty('📷', 'لا عمليات مسح بعد')) + '</div>');
+}
+
+/* ============ 30. تشغيل التطبيق ============ */
+DB.init();
+document.documentElement.dir = 'rtl';
+document.documentElement.lang = 'ar';
+
+/* جسر التطبيق المحلي (WebView أندرويد / Electron) — يعمل فقط داخل الحاوية */
+if (typeof window.NativeBridge !== 'undefined') {
+  try { window.NativeBridge.toast('مرحباً بك في تطبيق VITAL DZ'); } catch (e) {}
+}
+
+window.addEventListener('online', () => { if (Store.user) { toast('🟢 عاد الاتصال — بدء المزامنة', 'success'); syncNow(); Router.shellSync(); } });
+window.addEventListener('offline', () => { if (Store.user) { toast('🟠 انقطع الاتصال — البيانات تُحفظ محلياً', 'warning'); Router.shellSync(); } });
+document.addEventListener('click', (e) => {
+  const hr = document.getElementById('search-results');
+  if (hr && !e.target.closest('.search-box')) hr.classList.remove('open');
+});
+
+Router.go('home');
+</script>
+</body>
+</html>
